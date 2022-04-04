@@ -1,0 +1,332 @@
+/**
+Theme Name: KidsGen
+Theme URI: https://www.sharkthemes.com/downloads/kidsgen/
+Author: Shark Themes
+Author URI: https://sharkthemes.com/
+Version: 1.0.0
+Requires PHP: 5.6
+Tested up to: 5.8
+Requires at least: 5.0
+Template: kidsvibe
+Text Domain: kidsgen
+Description: KidsVibe is a simple, clean and excellently developed theme for kids website. It is compatible with WooCommerce. This theme is developed for kindergartens, daycares, preschools and other children related businesses. It is a child theme of KidsVibe. Theme Demo: https://demo.sharkthemes.com/kidsgen/
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: translation-ready, custom-background, custom-header, theme-options, custom-menu, threaded-comments, featured-images, featured-image-header, footer-widgets, right-sidebar, full-width-template, two-columns, three-columns, grid-layout, custom-logo, blog, portfolio, education
+
+KidsGen WordPress Theme is child theme of KidsVibe WordPress Theme, Copyright 2021 Shark Themes
+KidsGen is distributed under the terms of the GNU General Public License v3 or later
+
+KidsVibe WordPress Theme, Copyright 2021 Shark Themes
+KidsVibe is distributed under the terms of the GNU General Public License v3 or later
+*/
+
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more a:hover,
+.main-navigation ul.sub-menu,
+.short-cta-section,
+#skills,
+.menu-toggle,
+.backtotop:hover,
+a.more-btn:hover,
+.hero-section .read-more a:hover,
+#pricing .read-more a:hover,
+.widget .tagcloud a:hover,
+.blog-loader-btn .read-more a:hover,
+.cta-section .read-more a:hover,
+.widget_search form.search-form button.search-submit:hover,
+form.search-form button.search-submit:hover,
+#contact .section-content .entry-container,
+#top-menu ul li.mini-cart .mini-cart-items,
+#introduction .wp-playlist.wp-audio-playlist.wp-playlist-light,
+#custom-header .banner-slider.dark-text .custom-header-content p.sub-title:before,
+#custom-header .banner-slider.dark-text .custom-header-content p.sub-title:after,
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more.alt-btn.alt-btn-primary a,
+#portfolio .gallery .featured-image .overlay,
+.testimonial-section .overlay,
+.cta-section .overlay,
+.cta-section,
+.team-section,
+#pricing,
+#pricing article.hentry.highlight .read-more a,
+.testimonial-slider .slick-dots li button:before,
+#gallery .gallery .featured-image .overlay,
+.schedule-section .wp-block-table thead,
+.hero-section #countdown .time,
+.hero-section #countdown .time span,
+.inner-header-image .overlay, 
+.counter-widget .overlay,
+#respond input[type="submit"]:hover, 
+#respond input[type="submit"]:focus,
+.custom-header-content-wrapper .overlay,
+#colophon,
+.site-info,
+#top-menu {
+    background-color: #12265a;
+}
+
+a,
+#custom-header .banner-slider.dark-text .custom-header-content-wrapper.slide-item .custom-header-content .read-more.alt-btn.alt-btn-primary a:hover,
+#custom-header .banner-slider.dark-text .custom-header-content-wrapper.slide-item .custom-header-content .read-more.alt-btn a,
+#custom-header .banner-slider.dark-text .custom-header-content p.sub-title,
+#custom-header .banner-slider.dark-text .custom-header-content h2 a,
+article .entry-title a,
+.section-title,
+.schedule-section .schedule-tab ul li a,
+#pricing article.hentry.highlight .read-more a:hover,
+.speaker-section article .entry-title a, 
+.speaker-section .section-title,
+.site-title a,
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more.alt-btn.alt-btn-primary a:hover,
+.short-cta-section.cta-section .read-more a:hover,
+#contact .wpcf7 input.wpcf7-form-control.wpcf7-submit:hover, 
+#contact .wpcf7 input.wpcf7-form-control.wpcf7-submit:focus,
+#secondary .widget-title, 
+#secondary .widgettitle,
+.widget .tagcloud a {
+    color: #12265a;
+}
+
+.team-section .team-image .overlay {
+    background: linear-gradient(0deg, #12265a, transparent);
+}
+
+.widget .tagcloud a {
+    border-color: #12265a;
+}
+
+/*Secondary Color*/
+.loader-container svg, 
+.blog-loader svg,
+.secondary-menu ul li svg,
+#masthead.site-header.sticky-header.nav-shrink .main-navigation ul li.menu-item-has-children a:hover svg, 
+.navigation.pagination svg,
+.navigation.posts-navigation a:hover svg, 
+.navigation.post-navigation a:hover svg,
+.main-navigation ul li.menu-item-has-children a:hover svg {
+    fill: #fe4b7b;
+}
+
+a:hover, a:focus,
+.entry-meta > span a:hover, 
+.entry-meta > span a:focus,
+span.posted-on a:hover, 
+span.posted-on a:focus, 
+span.posted-on time:hover,
+span.posted-on time:focus,
+article .entry-title a:hover,
+.our-services article .entry-title a:hover,
+.main-navigation a:hover, 
+ul.trail-items li.trail-item.trail-end,
+ul.trail-items li a:hover, 
+ul.trail-items li a:focus,
+#masthead.site-header.sticky-header.nav-shrink .main-navigation .current_page_item > a, 
+#masthead.site-header.sticky-header.nav-shrink .main-navigation .current-menu-item > a, 
+#masthead.site-header.sticky-header.nav-shrink .main-navigation .current_page_ancestor > a, 
+#masthead.site-header.sticky-header.nav-shrink .main-navigation .current-menu-ancestor > a, 
+.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, 
+#masthead.absolute-header .main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a, 
+.main-navigation .current-menu-ancestor > a,
+ul.check-list li:before,
+p.sub-title,
+#gallery .gallery .featured-image a.more-btn:hover,
+#portfolio .gallery .featured-image a.more-btn:hover,
+.main-navigation ul.menu li.current-menu-item > a {
+    color: #fe4b7b;
+}
+
+a.more-btn,
+.separator,
+.backtotop,
+#secondary .widget-title:after, 
+#secondary .widgettitle:after,
+.hero-section .read-more a,
+.blog-loader-btn .read-more a,
+.blog-loader-btn .read-more a, 
+.read-more a,
+.schedule-section .schedule-tab ul li a:after,
+#introduction .wp-playlist .mejs-inner .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+#introduction .wp-playlist .mejs-inner .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current:after,
+#introduction .wp-playlist-tracks .wp-playlist-item.wp-playlist-playing,
+#introduction .wp-playlist-tracks .wp-playlist-item:hover,
+#introduction .wp-playlist .mejs-inner .mejs-controls .mejs-time-rail .mejs-time-current,
+#introduction .wp-playlist .mejs-currenttime,
+.widget_search form.search-form button.search-submit,
+form.search-form button.search-submit,
+.wpcf7 input.wpcf7-form-control.wpcf7-submit,
+#skills .wrapper .section-content .skills-background a.skills-play-btn,
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more a,
+.short-cta-section .read-more a,
+.speaker-section.team-section .social-icons li,
+.testimonial-slider article .social-icons li a,
+#pricing article.hentry.highlight .post-wrapper,
+#pricing .read-more a,
+.team-section .social-icons li,
+#respond input[type="submit"],
+.pagination .page-numbers.current,
+.banner-slider .slick-prev,
+.banner-slider .slick-next,
+.banner-slider .slick-prev:hover,
+.banner-slider .slick-next:hover,
+.banner-slider .slick-prev:focus,
+.banner-slider .slick-next:focus,
+.slick-prev:hover, 
+.slick-next:hover, 
+.slick-prev:focus, 
+.slick-next:focus {
+    background-color: #fe4b7b;
+}
+
+#pricing article.hentry.highlight .post-wrapper {
+    background-color: #fe4b7b !important;
+}
+
+#respond input[type="submit"],
+#skills .wrapper .section-content .skills-background a.skills-play-btn:before {
+    border-color: #fe4b7b;
+}
+
+/*general*/
+a.more-btn,
+a.more-btn:hover,
+.blog-loader-btn .read-more a,
+.hero-section #countdown .time,
+#pricing .read-more a,
+#pricing .read-more a:hover,
+.hero-section .read-more a,
+.hero-section .read-more a:hover,
+.cta-section .read-more a:hover,
+.short-cta-section .read-more a,
+.speaker-section .section-title,
+.wpcf7 input.wpcf7-form-control.wpcf7-submit,
+.testimonial-section article .entry-title a:hover,
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more a:hover,
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more a {
+    color: #fff;
+}
+
+#contact,
+#front-products,
+#pricing article .post-wrapper,
+.client-section {
+    background-color: #f6f6f7;
+}
+
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more.alt-btn.alt-btn-primary a:hover,
+#contact .wpcf7 input.wpcf7-form-control.wpcf7-submit:hover, 
+#contact .wpcf7 input.wpcf7-form-control.wpcf7-submit:focus,
+.short-cta-section .read-more a:hover {
+    background-color: #fff;
+}
+
+.team-section .social-icons li:hover {
+    background-color: #fff;
+}
+
+.custom-header-content-wrapper.slide-item .custom-header-content .read-more.alt-btn a {
+    background-color: transparent;
+}
+
+@keyframes preloader {
+    0% {height:5px;transform:translateY(0px);background: #fe4b7b;}
+    25% {height:30px;transform:translateY(15px);background: #fe4b7b;}
+    50% {height:5px;transform:translateY(0px);background: #fe4b7b;}
+    100% {height:5px;transform:translateY(0px);background: #fe4b7b;}
+}
+
+
+@media screen and (min-width: 1024px) {
+    #search.search-open {
+        border-color: #fe4b7b;
+        background-color: #fe4b7b;
+    }
+    #masthead .main-navigation ul.nav-menu > li.button a {
+        border-color: #12265a;
+        color: #12265a;
+    }
+    #masthead .main-navigation ul.nav-menu > li.button:hover a {
+        background-color: #12265a;
+        color: #fff;
+    }
+    #masthead.site-header.sticky-header.nav-shrink {
+        background-color: #12265a;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #masthead.absolute-header.site-header.sticky-header.nav-shrink .site-title a, 
+    #masthead.absolute-header .site-title a,
+    #masthead.site-header.sticky-header.nav-shrink .site-title a,
+    #masthead.site-header.sticky-header .site-title a,
+    #masthead.site-header.sticky-header.nav-shrink .site-title a, 
+    .site-title a, 
+    #masthead.site-header.sticky-header .site-title a {
+        color: #12265a;
+    }
+    .main-navigation,
+    .main-navigation ul.nav-menu {
+        background-color: #12265a;
+    }
+}
+
+/* Woocommerce */
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title, 
+.woocommerce ul.products li.product .woocommerce-loop-product__title, 
+.woocommerce ul.products li.product h3
+{
+    color: #12265a;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button,
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt,
+.woocommerce .widget_price_filter .price_slider_amount .button,
+.woocommerce ul.products li.product .button
+{
+    color: #fff;
+    background-color: #fe4b7b;
+}
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover,
+.woocommerce .widget_price_filter .price_slider_amount .button:hover,
+.woocommerce ul.products li.product .button:hover 
+{
+    background-color: #12265a;
+    color: #fff;
+}
+.woocommerce ul.products li.product .woocommerce-loop-category__title:hover, 
+.woocommerce ul.products li.product .woocommerce-loop-product__title:hover, 
+.woocommerce ul.products li.product h3:hover 
+{
+    color: #fe4b7b;
+}
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range
+{
+    background-color: #fe4b7b;
+}
+.woocommerce-pagination svg
+{
+    fill: #fe4b7b;
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus svg, 
+.woocommerce nav.woocommerce-pagination ul li a:focus, 
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li a:hover svg
+{
+    border-color: #12265a;
+    color: #12265a;
+    fill: #12265a;
+}

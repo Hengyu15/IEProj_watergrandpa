@@ -1,0 +1,65 @@
+/*
+ * admin css
+*/
+.kidsvibe-accordion {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+.kidsvibe-accordion:after {
+    content: "+";
+    background-repeat: no-repeat;
+    margin: auto;
+    float: right;
+}
+.kidsvibe-panel {
+    display: none;
+}
+label {
+    font-weight: 500;
+}
+.block {
+    display: block;
+}
+.none {
+    display: none;
+}
+.widget-content .chosen-container {
+    display: none;
+}
+.widget-content p > .chosen-container {
+    display: block;
+}
+
+/*************** 10. Multi fields ***************/
+.widget_multi_input {
+    margin: 1em 0;
+}
+.widget_multi_fields .set{
+    margin-bottom: 5px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.widget_multi_fields input{
+    margin-bottom: 5px!important;
+}
+
+.widget_multi_remove_field{
+    color: red;
+    position: absolute;
+    right: -7px;
+    top: 3px;
+}
+
+.widget_multi_remove_field span{
+    text-decoration: none;
+}
+
+.widget_multi_remove_field:active,
+.widget_multi_remove_field:focus{
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
