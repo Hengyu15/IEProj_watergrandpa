@@ -1,0 +1,68 @@
+/* Radio Image Control */
+.form-wrap p, p.description, p.help, span.description {
+    font-style: normal;
+}
+
+/* Radio Image Control */
+ 
+.customize-control-radio-image .image.ui-buttonset input[type=radio] {
+    height: auto; 
+}
+.customize-control-radio-image .image.ui-buttonset label {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px; 
+}
+.customize-control-radio-image .image.ui-buttonset label.ui-state-active {
+    background: none;
+}
+.customize-control-radio-image .customize-control-radio-buttonset label {
+    padding: 5px 10px;
+    background: #f7f7f7;
+    border-left: 1px solid #dedede;
+    line-height: 35px; 
+}
+.customize-control-radio-image label img {
+    border: 1px solid #bbb;
+    opacity: 0.8;
+}
+#customize-controls .customize-control-radio-image label img {
+    max-width: 50px;
+    height: auto;
+}
+.customize-control-radio-image label.ui-state-active img {
+    background: #fff;
+    opacity: 1;
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+    border: 1px solid #3498DB;
+    padding: 3px;
+}
+.customize-control-radio-image label.ui-state-hover img {
+    opacity: 0.9;
+    border-color: #999; 
+}
+.customize-control-radio-buttonset label.ui-corner-left {
+    border-radius: 3px 0 0 3px;
+    border-left: 0; 
+}
+.customize-control-radio-buttonset label.ui-corner-right {
+    border-radius: 0 3px 3px 0; 
+}
+.control-section-pridmag-upsell .accordion-section-title .button {
+	margin-top: -3px;
+	margin-left: 8px;
+}
+.rtl .control-section-pridmag-upsell .accordion-section-title .button {
+	margin-left:  0;
+	margin-right: 8px;
+}
+#accordion-section-pridmag_upsell .button {
+    background: #45C8B3;
+    border: none;
+    box-shadow: 0 1px 0 #308a7b;
+    color: #fff;
+}
+#accordion-section-pridmag_upsell .button:active {
+    box-shadow: none;
+}

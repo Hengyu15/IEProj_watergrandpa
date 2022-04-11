@@ -2,17 +2,18 @@
 # This file is distributed under the same license as the WordPress - 5.9.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 18:10:35+0000\n"
+"PO-Revision-Date: 2022-04-06 12:46:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/3.0.0-rc.3\n"
 "Language: zh_CN\n"
 "Project-Id-Version: WordPress - 5.9.x - Development - Administration\n"
 
 #. translators: Default start of the week. 0 = Sunday, 1 = Monday.
 #: wp-admin/includes/schema.php:409
+#, gp-priority: high
 msgctxt "start of week"
 msgid "1"
 msgstr "1"
@@ -22,17 +23,19 @@ msgstr "1"
 #. https://www.php.net/manual/en/timezones.php for all timezone strings
 #. supported by PHP.
 #: wp-admin/includes/schema.php:393
+#, gp-priority: high
 msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "Asia/Shanghai"
 
 #: wp-admin/includes/media.php:1741 wp-admin/upgrade.php:74
 #: wp-admin/upgrade.php:154
+#, gp-priority: high
 msgid "Continue"
 msgstr "继续"
 
 #. translators: %s: Learn WordPress link.
-#: wp-admin/about.php:329
+#: wp-admin/about.php:354
 msgid "Want to dive into 5.9 but don&#8217;t know where to start? Visit <a href=\"%s\">learn.wordpress.org</a> for expanding resources on new features in WordPress 5.9."
 msgstr "想深入了解 5.9 但不知从何处开始？ 请访问 <a href=\"%s\">learn.wordpress.org</a> 以获取 WordPress 5.9 新功能的相关资源。"
 
@@ -105,144 +108,144 @@ msgstr "详细了解 %s 版本。"
 msgid "WordPress is free and open source software"
 msgstr "WordPress 是可自由使用的开源软件"
 
-#: wp-admin/about.php:324
+#: wp-admin/about.php:349
 msgid "Learn more about the new features in 5.9"
 msgstr "详细了解  5.9 的新功能"
 
 #. translators: %s: Gallery Refactor dev note link.
-#: wp-admin/about.php:309
+#: wp-admin/about.php:334
 msgid "The changes to the Gallery block listed above are the result of a near-complete refactoring. Have you built a plugin or theme on the Gallery block functionality? Be sure to read the <a href=\"%s\">Gallery block compatibility dev note</a>."
 msgstr "前文列出的对画廊区块的更改是一个近乎完全重构的结果，在开发与画廊区块功能相关的插件或主题前，请务必阅读<a href=\"%s\">画廊区块兼容性开发说明</a>。"
 
-#: wp-admin/about.php:303
+#: wp-admin/about.php:328
 msgid "A refactored Gallery block"
 msgstr "经过重构的画廊区块"
 
-#: wp-admin/about.php:298
+#: wp-admin/about.php:323
 msgid "Now you can lock any block (or a few of them) in a pattern, just by adding a lock attribute to its settings in block.json &#8212; leaving the rest of the pattern free for site editors to adapt to their content."
 msgstr "至此版本开始，您可将区块样板中的任意区块进行锁定，只需在 block.json 的设置中加入 lock 属性，让样板的其他部分自由适应站点内容。"
 
-#: wp-admin/about.php:295
+#: wp-admin/about.php:320
 msgid "Block&#8209;level locking"
 msgstr "区块‑层级锁定"
 
 #. translators: %s: Multiple stylesheets dev note link.
-#: wp-admin/about.php:285
+#: wp-admin/about.php:310
 msgid "Now you can register more than one stylesheet per block. You can use this to share styles across blocks you write, or to load styles for individual blocks, so your styles are only loaded when the block is used. Find out more about <a href=\"%s\">using multiple stylesheets in a block</a>."
 msgstr "现在，您可为每个区块注册一个以上的样式表，一可应用此特性在您自行编写的区块间共享样式，或者为个别区块加载样式，且只有在区块被使用时，样式才会被加载。 了解关于 <a href=\"%s\">在单个区块中使用多重样式</a>的更多信息。"
 
-#: wp-admin/about.php:279
+#: wp-admin/about.php:304
 msgid "Multiple stylesheets for a block"
 msgstr "区块支持多重样式"
 
 #. translators: %s: Block-based themes dev note link.
-#: wp-admin/about.php:271
+#: wp-admin/about.php:296
 msgid "A new way to build themes: Block themes use blocks to define the templates that structure your entire site. The new templates and template parts are defined in HTML and use the custom styling offered in theme.json. More information is available in the <a href=\"%s\">block themes dev note</a>."
 msgstr "构建主题的全新方式，便是使用区块定义整个站点布局模板的区块主题，而 HTML 和 theme.json 中的自定义样式定义了全新的模板和模板组件。 预了解详情，请参阅 <a href=\"%s\">区块主题开发说明</a>。"
 
-#: wp-admin/about.php:265
+#: wp-admin/about.php:290
 msgid "Introducing block themes"
 msgstr "引入区块主题"
 
 #. translators: %s: Version number.
-#: wp-admin/about.php:255
+#: wp-admin/about.php:280
 msgid "WordPress %s for developers"
 msgstr "WordPress %s 开发者注事"
 
-#: wp-admin/about.php:240
+#: wp-admin/about.php:265
 msgid "Style every image in your gallery differently from the next (with different crops, or duotones, for instance) or make them all the same. And change the layout with drag-and-drop."
 msgstr "在画廊中，每张图片的样式都与其他图片不同（例如不同的剪裁或双色调），或使其完全相同，亦可通过拖放的方式来改变布局。"
 
-#: wp-admin/about.php:237
+#: wp-admin/about.php:262
 msgid "Treat every image in a Gallery block the same way you would treat it in the Image block."
 msgstr "使用在图片区块中处理图片的相同方式处理画廊区块中的每张图片。"
 
-#: wp-admin/about.php:234
+#: wp-admin/about.php:259
 msgid "A better Gallery block"
 msgstr "更好用的画廊区块"
 
-#: wp-admin/about.php:226
+#: wp-admin/about.php:251
 msgid "In 5.9, the List View lets you drag and drop your content exactly where you want it. Managing complex documents is easier, too: simple controls let you expand and collapse sections as you build your site &#8212; and add HTML anchors to your blocks to help users get around the page."
 msgstr "5.9 版本中的列表视图可让您通过拖放区块内容的方式，将区块移至所需的位置。 管理复杂文件变得更简单，简易的控制项让您在构建站点时能够对区段进行展开和折叠，并将可帮助用户浏览页面的 HTML 锚点添加至区块中。"
 
-#: wp-admin/about.php:223
+#: wp-admin/about.php:248
 msgid "A revamped List View"
 msgstr "经过改进的列表视图"
 
-#: wp-admin/about.php:209
+#: wp-admin/about.php:234
 msgid "With a near full-screen view that draws you in to see fine details, the Pattern Explorer makes it easy to compare patterns and choose the one your users will expect."
 msgstr "通过具有全屏视图的区块样板浏览程序，您便可聚焦到精细的细节，从而能够轻松的比较并从中选择所需的区块样板。"
 
-#: wp-admin/about.php:206
+#: wp-admin/about.php:231
 msgid "The WordPress Pattern Directory is the home of a wide range of block patterns built to save you time and add core site functionality. And you can edit them as you see fit. Need something different in the header or footer for your theme? Swap it out with a new one in a few clicks."
 msgstr "WordPress 样板目录是各种区块样板的家园，这些样板能够为您节省时间并增加站点的核心功能，您可以根据需要对这些区块样板进行编辑。若需要为当前的主题更换不同的页眉或页脚，只需点击几下便可焕然一新。"
 
-#: wp-admin/about.php:203
+#: wp-admin/about.php:228
 msgid "The power of patterns"
 msgstr "区块样板的力量"
 
-#: wp-admin/about.php:195
+#: wp-admin/about.php:220
 msgid "WordPress 5.9 features new typography tools, flexible layout controls, and finer control over details like spacing, borders, and more &#8212; to help you get not just the look, but the polish that says you care about details."
 msgstr "WordPress 5.9 具有新的排版工具、灵活的布局控制以及对间距、边框等细节的精细控制，不仅有助于您设计外观，甚至能够对所需细节进行调整。"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:217
 msgid "Better block controls"
 msgstr "更细致的区块控制"
 
-#: wp-admin/about.php:180
+#: wp-admin/about.php:205
 msgid "Do you love to blog or produce content? New tweaks to the publishing flow help you say more, faster."
 msgstr "您喜欢写博文或创作内容吗？新调整的发布流程可帮助您说得更多、更快。"
 
-#: wp-admin/about.php:177
+#: wp-admin/about.php:202
 msgid "More improvements and updates"
 msgstr "更多改进和更新"
 
-#: wp-admin/about.php:168
+#: wp-admin/about.php:193
 msgid "The new Navigation block gives you the power to choose: an always-on responsive menu or one that adapts to your user&#8217;s screen size. Whatever you create, know it&#8217;s there to reuse wherever you like, whether in a brand new template or after switching themes."
 msgstr "全新的导航区块提供多种选项供您选择，例如始终展开的响应式菜单或适应用户屏幕尺寸的菜单。无论创建哪种菜单，即使是使用全新模板或切换主题后，都可以在所需的位置重复使用。"
 
-#: wp-admin/about.php:165
+#: wp-admin/about.php:190
 msgid "Blocks come to site navigation, the heart of user experience."
 msgstr "此次用户体验的核心，将区块引入到站点导航栏。"
 
-#: wp-admin/about.php:162
+#: wp-admin/about.php:187
 msgid "The Navigation block"
 msgstr "导航区块"
 
-#: wp-admin/about.php:148
+#: wp-admin/about.php:173
 msgid "When you use any of those new themes, you no longer need the Customizer. Instead, you have all the power of the Styles interface inside the Site Editor. Just as in Twenty Twenty&#8209;Two, you build your site&#8217;s look and feel there, with the tools you need for the job in a fluid interface that practically comes alive in your hands."
 msgstr "使用任意一个区块主题后，您便不再需要外观定制器；取而代之的是站点编辑器中、样式界面中的全部功能。使用这些区块就像在 Twenty Twenty-Two 中一样，您可以按需为站点构建合适的外观和风格，并在流畅、顺手的界面中使用所需的工具完成工作。"
 
-#: wp-admin/about.php:145
+#: wp-admin/about.php:170
 msgid "More block themes built for full site editing features are in the Theme Directory alongside the Twenty Twenty&#8209;Two theme, just waiting to be explored. Expect more to come!"
 msgstr "随着 Twenty Twenty-Two 主题的发布，更多支持全站编辑的区块主题也会陆续上架到主题目录中，并等待用户进行深入探索。敬请期待将来发布的更多区块主题。"
 
-#: wp-admin/about.php:142
+#: wp-admin/about.php:167
 msgid "Your personal paintbox awaits"
 msgstr "构建站点，创意无限"
 
 #. translators: %s: Link to Themes screen.
-#: wp-admin/about.php:130
+#: wp-admin/about.php:155
 msgid "The Twenty Twenty&#8209;Two theme is already available to you. It came installed with WordPress 5.9, and you will find it with <a href=\"%s\">your other installed themes</a>."
 msgstr "Twenty Twenty-Two 主题已可供使用，此主题会与 WordPress 5.9 一并安装，可在<a href=\"%s\">已安装的主题</a>页面中找到。"
 
-#: wp-admin/about.php:123
+#: wp-admin/about.php:148
 msgid "Block themes put a wide array of visual choices in your hands, from color schemes and typeface combinations to page templates and image filters &#8212; all together, in the site editing interface. By making changes in one place, you can give Twenty Twenty&#8209;Two the same look and feel as your brand or other websites &#8212; or take your site&#8217;s look in another direction."
 msgstr "区块主题为您提供了大量的视觉化选择，从配色方案到字体组合在到页面模板和图片筛选，全部都可通过站点编辑器进行变更。由于只需要在一个地方进行修改，您可以为 Twenty Twenty-Two 主题提供与自有品牌或其他网站相同的外观和风格，或将您站点的外观转向另一方向。"
 
-#: wp-admin/about.php:120
+#: wp-admin/about.php:145
 msgid "And say hello to the first default block theme in the history of WordPress. This is more than just a new default theme. It&#8217;s a brand-new way to work with WordPress themes."
 msgstr "这是 WordPress 有史以来的第一个默认区块主题。 它不仅是一个新的默认主题， 也是使用 WordPress 主题的一种全新方式。"
 
-#: wp-admin/about.php:117
+#: wp-admin/about.php:142
 msgid "Say hello to Twenty Twenty&#8209;Two"
 msgstr "全新的 Twenty Twenty-Two 主题"
 
-#: wp-admin/about.php:105
+#: wp-admin/about.php:130
 msgid "It puts you in control of your whole site, right in the WordPress Admin."
 msgstr "全站编辑功能使您能够在 WordPress 管理仪表盘中对整个站点的外观进行控制。"
 
-#: wp-admin/about.php:102
+#: wp-admin/about.php:127
 msgid "Full Site Editing is here"
 msgstr "全站编辑功能正式上线"
 
@@ -785,11 +788,11 @@ msgid "Want more events? <a href=\"%s\">Help organize the next one</a>!"
 msgstr "想要更多活动吗？<a href=\"%s\">帮助组织下一场活动</a>！"
 
 #. translators: %s: User's display name.
-#: wp-admin/includes/ajax-actions.php:5460
+#: wp-admin/includes/ajax-actions.php:5483
 msgid "A password reset link was emailed to %s."
 msgstr "密码重置链接已通过邮件发送至%s。"
 
-#: wp-admin/includes/ajax-actions.php:5450
+#: wp-admin/includes/ajax-actions.php:5473
 msgid "Cannot send password reset, permission denied."
 msgstr "无法发送密码重置邮件，权限不足。"
 
@@ -936,7 +939,7 @@ msgid "https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-
 msgstr "https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-is-authentication-not-working"
 
 #. translators: %s: WordPress 5.9 Field Guide link.
-#: wp-admin/about.php:346
+#: wp-admin/about.php:371
 msgid "Check out the latest version of the WordPress Field Guide. It highlights developer notes for each change you may want to be aware of. <a href=\"%s\">WordPress 5.9 Field Guide.</a>"
 msgstr "请查阅最新版本的 WordPress 详解指南。这份详解指南强调了您可能需要了解的每个更改的开发者注意事项。《<a href=\"%s\">WordPress 5.9 详解指南</a>》"
 
@@ -1007,7 +1010,7 @@ msgstr "添加新的应用程序密码"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "此功能需要创建应用程序密码，但不需要更新用户信息。"
 
-#: wp-admin/about.php:359
+#: wp-admin/about.php:384
 msgid "Go to Updates"
 msgstr "转到“更新”页面"
 
@@ -1166,10 +1169,10 @@ msgstr "最后使用"
 
 #. translators: 1: The Site Health action that is no longer used by core. 2:
 #. The new function that replaces it.
-#: wp-admin/includes/ajax-actions.php:5188
-#: wp-admin/includes/ajax-actions.php:5221
-#: wp-admin/includes/ajax-actions.php:5254
-#: wp-admin/includes/ajax-actions.php:5304
+#: wp-admin/includes/ajax-actions.php:5211
+#: wp-admin/includes/ajax-actions.php:5244
+#: wp-admin/includes/ajax-actions.php:5277
+#: wp-admin/includes/ajax-actions.php:5327
 msgid "The Site Health check for %1$s has been replaced with %2$s."
 msgstr "站点健康检查的%1$s已被%2$s代替。"
 
@@ -1349,7 +1352,7 @@ msgstr "\"%1$s\"的值小于\"%2$s\""
 msgid "Environment type"
 msgstr "环境类型"
 
-#: wp-admin/about.php:341
+#: wp-admin/about.php:366
 msgid "Check the Field Guide for more!"
 msgstr "查阅详解指南以了解更多信息"
 
@@ -1417,7 +1420,7 @@ msgctxt "theme"
 msgid "Activate &#8220;%s&#8221;"
 msgstr "启用“%s”"
 
-#: wp-admin/includes/ajax-actions.php:5394
+#: wp-admin/includes/ajax-actions.php:5417
 msgid "Sorry, you are not allowed to modify plugins."
 msgstr "抱歉，您不能修改插件。"
 
@@ -1471,7 +1474,7 @@ msgid "File upload settings"
 msgstr "文件上传设置"
 
 #. translators: %s: Theme name.
-#: wp-admin/theme-install.php:408
+#: wp-admin/theme-install.php:411
 msgctxt "theme"
 msgid "Cannot Install %s"
 msgstr "无法安装%s"
@@ -1484,7 +1487,7 @@ msgstr "安装%s"
 
 #. translators: %s: Theme name.
 #: wp-admin/includes/class-wp-theme-install-list-table.php:334
-#: wp-admin/theme-install.php:401
+#: wp-admin/theme-install.php:404
 msgctxt "theme"
 msgid "Install %s"
 msgstr "安装%s"
@@ -1504,7 +1507,7 @@ msgstr "立即更新%s"
 msgid "- %1$s version %2$s"
 msgstr "- %1$s 版本 %2$s"
 
-#: wp-admin/theme-install.php:371 wp-admin/theme-install.php:433
+#: wp-admin/theme-install.php:372 wp-admin/theme-install.php:436
 msgctxt "theme"
 msgid "Activated"
 msgstr "已启用"
@@ -1542,7 +1545,7 @@ msgid "Dismiss this notice."
 msgstr "忽略此通知。"
 
 #. translators: %s: Theme name.
-#: wp-admin/theme-install.php:386 wp-admin/themes.php:561
+#: wp-admin/theme-install.php:389 wp-admin/themes.php:561
 #: wp-admin/themes.php:921 wp-admin/themes.php:1140
 msgctxt "theme"
 msgid "Cannot Activate %s"
@@ -1639,8 +1642,8 @@ msgstr "WordPress大版本及每个主题、插件均可单独启用或禁用自
 msgid "<strong>Important:</strong> Before updating, please <a href=\"%1$s\">back up your database and files</a>. For help with updates, visit the <a href=\"%2$s\">Updating WordPress</a> documentation page."
 msgstr "<strong>重要：</strong>在更新前，请<a href=\"%1$s\">备份您的数据库和文件</a>。要获得关于更新的帮助，请访问<a href=\"%2$s\">更新WordPress</a>文档页面。"
 
-#: wp-admin/customize.php:199 wp-admin/theme-install.php:389
-#: wp-admin/theme-install.php:436 wp-admin/themes.php:563
+#: wp-admin/customize.php:199 wp-admin/theme-install.php:392
+#: wp-admin/theme-install.php:439 wp-admin/themes.php:563
 #: wp-admin/themes.php:923 wp-admin/themes.php:1143
 msgctxt "theme"
 msgid "Cannot Activate"
@@ -1676,20 +1679,20 @@ msgctxt "plugin"
 msgid "<strong>Error:</strong> Current versions of WordPress (%1$s) and PHP (%2$s) do not meet minimum requirements for %3$s. The plugin requires WordPress %4$s and PHP %5$s."
 msgstr "<strong>错误：</strong>当前WordPress版本（%1$s）和PHP版本（%2$s）未能达到%3$s的最低版本要求。此插件需要WordPress %4$s和PHP %5$s。"
 
-#: wp-admin/includes/ajax-actions.php:5416
+#: wp-admin/includes/ajax-actions.php:5439
 msgid "Invalid data. The item does not exist."
 msgstr "无效数据。该项目不存在。"
 
-#: wp-admin/includes/ajax-actions.php:5387
-#: wp-admin/includes/ajax-actions.php:5412
+#: wp-admin/includes/ajax-actions.php:5410
+#: wp-admin/includes/ajax-actions.php:5435
 msgid "Invalid data. Unknown type."
 msgstr "无效数据。 未知类型。"
 
-#: wp-admin/includes/ajax-actions.php:5382
+#: wp-admin/includes/ajax-actions.php:5405
 msgid "Invalid data. Unknown state."
 msgstr "无效数据。 未知状态。"
 
-#: wp-admin/includes/ajax-actions.php:5376
+#: wp-admin/includes/ajax-actions.php:5399
 msgid "Invalid data. No selected item."
 msgstr "无效数据。未选择项目。"
 
@@ -2042,8 +2045,8 @@ msgstr "所需的WordPress版本"
 msgid "Theme name"
 msgstr "主题名称"
 
-#: wp-admin/includes/theme.php:1063 wp-admin/theme-install.php:410
-#: wp-admin/theme-install.php:442
+#: wp-admin/includes/theme.php:1063 wp-admin/theme-install.php:413
+#: wp-admin/theme-install.php:445
 msgctxt "theme"
 msgid "Cannot Install"
 msgstr "无法安装"
@@ -2349,7 +2352,7 @@ msgstr "<a href=\"https://wordpress.org/support/article/posts-screen/\">管理�
 msgid "<a href=\"https://wordpress.org/support/article/settings-discussion-screen/\">Documentation on Discussion Settings</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/settings-discussion-screen/\">讨论设置文档</a>"
 
-#: wp-admin/theme-install.php:140
+#: wp-admin/theme-install.php:141
 msgid "<a href=\"https://wordpress.org/support/article/using-themes/#adding-new-themes\">Documentation on Adding New Themes</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/using-themes/#adding-new-themes\">添加新主题文档</a>"
 
@@ -3022,17 +3025,17 @@ msgid "The authenticity of %s could not be verified as signature verification is
 msgstr "无法验证%s的真实性，因为签名验证于此系统不可用。"
 
 #. translators: %s: Eraser friendly name.
-#: wp-admin/includes/ajax-actions.php:5063
+#: wp-admin/includes/ajax-actions.php:5086
 msgid "Eraser callback is not valid: %s."
 msgstr "抹除器回调无效：%s。"
 
 #. translators: %s: Eraser friendly name.
-#: wp-admin/includes/ajax-actions.php:5053
+#: wp-admin/includes/ajax-actions.php:5076
 msgid "Eraser does not include a callback: %s."
 msgstr "抹除器未包含回调：%s。"
 
-#: wp-admin/includes/ajax-actions.php:4775
-#: wp-admin/includes/ajax-actions.php:4966
+#: wp-admin/includes/ajax-actions.php:4798
+#: wp-admin/includes/ajax-actions.php:4989
 msgid "Sorry, you are not allowed to perform this action."
 msgstr "抱歉，您不能进行此操作。"
 
@@ -4168,11 +4171,11 @@ msgstr[0] "全部<span class=\"count\">（%s）</span>"
 msgid "Show comments cookies opt-in checkbox, allowing comment author cookies to be set"
 msgstr "显示评论cookies复选框，允许设置评论者cookies。"
 
-#: wp-admin/theme-install.php:423
+#: wp-admin/theme-install.php:426
 msgid "Next theme"
 msgstr "下一个主题"
 
-#: wp-admin/theme-install.php:422
+#: wp-admin/theme-install.php:425
 msgid "Previous theme"
 msgstr "上一个主题"
 
@@ -4353,9 +4356,9 @@ msgid "Cannot Install"
 msgstr "未能安装"
 
 #. translators: %s: WordPress version.
-#: wp-admin/about.php:64 wp-admin/about.php:89 wp-admin/includes/update.php:302
-#: wp-admin/index.php:119 wp-admin/install.php:238 wp-admin/update-core.php:94
-#: wp-admin/upgrade.php:80
+#: wp-admin/about.php:64 wp-admin/about.php:89 wp-admin/about.php:114
+#: wp-admin/includes/update.php:302 wp-admin/index.php:119
+#: wp-admin/install.php:238 wp-admin/update-core.php:94 wp-admin/upgrade.php:80
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://cn.wordpress.org/support/wordpress-version/version-%s/"
 
@@ -4970,7 +4973,7 @@ msgid "Report generated for"
 msgstr "报告生成者"
 
 #. translators: %s: Exporter array index.
-#: wp-admin/includes/ajax-actions.php:4859
+#: wp-admin/includes/ajax-actions.php:4882
 msgid "Exporter array at index %s does not include a friendly name."
 msgstr "位于索引%s的导出器数组未包含友好名称。"
 
@@ -4982,72 +4985,72 @@ msgstr "抱歉，您不能抹除此站点的个人数据。"
 msgid "Sorry, you are not allowed to export personal data on this site."
 msgstr "抱歉，您不能从此站点导出个人数据。"
 
-#: wp-admin/includes/ajax-actions.php:5026
+#: wp-admin/includes/ajax-actions.php:5049
 msgid "Eraser index is out of range."
 msgstr "抹除器索引超出范围。"
 
-#: wp-admin/includes/ajax-actions.php:4985
+#: wp-admin/includes/ajax-actions.php:5008
 msgid "Missing eraser index."
 msgstr "缺少抹除器索引。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4910
+#: wp-admin/includes/ajax-actions.php:4933
 msgid "Expected done (boolean) in response array from exporter: %s."
 msgstr "导出器返回的数组中未包含done（布尔值）：%s。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4903
+#: wp-admin/includes/ajax-actions.php:4926
 msgid "Expected data array in response array from exporter: %s."
 msgstr "导出器返回的数组中未包含data数组：%s。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4896
+#: wp-admin/includes/ajax-actions.php:4919
 msgid "Expected data in response array from exporter: %s."
 msgstr "导出器返回的数组中未包含data：%s。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4889
+#: wp-admin/includes/ajax-actions.php:4912
 msgid "Expected response as an array from exporter: %s."
 msgstr "导出器返回的不是数组：%s。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4875
+#: wp-admin/includes/ajax-actions.php:4898
 msgid "Exporter callback is not a valid callback: %s."
 msgstr "导出器回调函数不是合法的回调函数：%s。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4868
+#: wp-admin/includes/ajax-actions.php:4891
 msgid "Exporter does not include a callback: %s."
 msgstr "导出器未包含回调函数：%s。"
 
 #. translators: %s: Exporter array index.
-#: wp-admin/includes/ajax-actions.php:4852
+#: wp-admin/includes/ajax-actions.php:4875
 msgid "Expected an array describing the exporter at index %s."
 msgstr "未找到描述位于索引%s的导出器的数组。"
 
-#: wp-admin/includes/ajax-actions.php:4838
+#: wp-admin/includes/ajax-actions.php:4861
 msgid "Exporter index is out of range."
 msgstr "导出器索引越界。"
 
-#: wp-admin/includes/ajax-actions.php:4834
+#: wp-admin/includes/ajax-actions.php:4857
 msgid "Exporter index cannot be negative."
 msgstr "导出器索引不能为负。"
 
-#: wp-admin/includes/ajax-actions.php:4828
+#: wp-admin/includes/ajax-actions.php:4851
 msgid "An exporter has improperly used the registration filter."
 msgstr "有导出器不当使用了注册过滤器。"
 
-#: wp-admin/includes/ajax-actions.php:4799
-#: wp-admin/includes/ajax-actions.php:4991
+#: wp-admin/includes/ajax-actions.php:4822
+#: wp-admin/includes/ajax-actions.php:5014
 msgid "Missing page index."
 msgstr "缺少页面索引。"
 
-#: wp-admin/includes/ajax-actions.php:4793
+#: wp-admin/includes/ajax-actions.php:4816
 msgid "Missing exporter index."
 msgstr "缺少导出器索引。"
 
-#: wp-admin/includes/ajax-actions.php:4784
-#: wp-admin/includes/ajax-actions.php:4975
+#: wp-admin/includes/ajax-actions.php:4807
+#: wp-admin/includes/ajax-actions.php:4998
 msgid "Invalid request type."
 msgstr "无效的请求类型。"
 
@@ -5177,7 +5180,7 @@ msgstr "个人数据导出"
 msgid "Personal Data Export for %s"
 msgstr "%s的个人数据导出"
 
-#: wp-admin/includes/ajax-actions.php:4789
+#: wp-admin/includes/ajax-actions.php:4812
 msgid "A valid email address must be given."
 msgstr "必须提供有效的电子邮箱地址。"
 
@@ -5248,61 +5251,61 @@ msgstr "确认请求重新发送成功。"
 msgid "Unable to initiate confirmation request."
 msgstr "无法发起确认请求。"
 
-#: wp-admin/includes/ajax-actions.php:4771
-#: wp-admin/includes/ajax-actions.php:4961
+#: wp-admin/includes/ajax-actions.php:4794
+#: wp-admin/includes/ajax-actions.php:4984
 msgid "Invalid request ID."
 msgstr "无效的请求ID。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5135
+#: wp-admin/includes/ajax-actions.php:5158
 msgid "Expected done flag in response array from %1$s eraser (index %2$d)."
 msgstr "从抹除器%1$s（索引%2$d）处收到的数组未包含done旗标。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5124
+#: wp-admin/includes/ajax-actions.php:5147
 msgid "Expected messages key to reference an array in response array from %1$s eraser (index %2$d)."
 msgstr "从抹除器%1$s（索引%2$d）处收到的数组包含的messages键未指代数组。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5113
+#: wp-admin/includes/ajax-actions.php:5136
 msgid "Expected messages key in response array from %1$s eraser (index %2$d)."
 msgstr "从抹除器%1$s（索引%2$d）处收到的数组未包含messages键。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5102
+#: wp-admin/includes/ajax-actions.php:5125
 msgid "Expected items_retained key in response array from %1$s eraser (index %2$d)."
 msgstr "从抹除器%1$s（索引%2$d）处收到的数组未包含items_retained键。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5091
+#: wp-admin/includes/ajax-actions.php:5114
 msgid "Expected items_removed key in response array from %1$s eraser (index %2$d)."
 msgstr "从抹除器%1$s（索引%2$d）处收到的数组未包含items_removed键。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5080
+#: wp-admin/includes/ajax-actions.php:5103
 msgid "Did not receive array from %1$s eraser (index %2$d)."
 msgstr "未从抹除器%1$s（索引%2$d）处收到数组。"
 
 #. translators: %d: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5044
+#: wp-admin/includes/ajax-actions.php:5067
 msgid "Eraser array at index %d does not include a friendly name."
 msgstr "位于索引%d的抹除器数组未包含友好名称。"
 
 #. translators: %d: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5039
+#: wp-admin/includes/ajax-actions.php:5062
 msgid "Expected an array describing the eraser at index %d."
 msgstr "未找到描述位于索引%d的抹除器的数组。"
 
-#: wp-admin/includes/ajax-actions.php:4842
-#: wp-admin/includes/ajax-actions.php:5030
+#: wp-admin/includes/ajax-actions.php:4865
+#: wp-admin/includes/ajax-actions.php:5053
 msgid "Page index cannot be less than one."
 msgstr "页面索引不能小于1。"
 
-#: wp-admin/includes/ajax-actions.php:5022
+#: wp-admin/includes/ajax-actions.php:5045
 msgid "Eraser index cannot be less than one."
 msgstr "抹除器索引不能小于1。"
 
-#: wp-admin/includes/ajax-actions.php:4981
+#: wp-admin/includes/ajax-actions.php:5004
 msgid "Invalid email address in request."
 msgstr "请求中包含无效的电子邮箱地址。"
 
@@ -5792,16 +5795,12 @@ msgstr "抱歉，您不能删除用户。"
 msgid "Sorry, you are not allowed to create users."
 msgstr "抱歉，您不能新建用户。"
 
-#: wp-admin/customize.php:238
-msgid "The Customizer allows you to preview changes to your site before publishing them. You can navigate to different pages on your site within the preview. Edit shortcuts are shown for some editable elements."
-msgstr "定制器允许您在发布前对站点的更改进行预览。您可以在预览中查看站点的不同页面。对于一些可编辑元素，会显示编辑快捷方式。"
-
 #: wp-admin/customize.php:258
 msgctxt "short (~12 characters) label for hide controls button"
 msgid "Hide Controls"
 msgstr "隐藏控制区"
 
-#: wp-admin/theme-install.php:71
+#: wp-admin/theme-install.php:72
 msgid "Expand Sidebar"
 msgstr "展开侧栏"
 
@@ -5818,21 +5817,21 @@ msgstr "ID #%1$s：%2$s <strong>抱歉，您不能移除此用户。</strong>"
 msgid "You can select the language you wish to use while using the WordPress administration screen without affecting the language site visitors see."
 msgstr "您可以选择WordPress管理界面的语言，这不会影响到站点访客所看到的语言。"
 
-#: wp-admin/theme-install.php:244
+#: wp-admin/theme-install.php:245
 msgid "Edit Filters"
 msgstr "编辑过滤器"
 
-#: wp-admin/theme-install.php:217 wp-admin/theme-install.php:239
+#: wp-admin/theme-install.php:218 wp-admin/theme-install.php:240
 msgid "Clear current filters"
 msgstr "清除当前过滤器"
 
 #. translators: Accessibility text.
-#: wp-admin/theme-install.php:73
+#: wp-admin/theme-install.php:74
 msgid "Select one or more Theme features to filter by"
 msgstr "选择一个或多个主题特征进行筛选"
 
 #. translators: %s: Number of ratings.
-#: wp-admin/includes/theme.php:857 wp-admin/theme-install.php:465
+#: wp-admin/includes/theme.php:857 wp-admin/theme-install.php:468
 msgid "(%s ratings)"
 msgstr "（%s个评级）"
 
@@ -5873,6 +5872,10 @@ msgstr "抱歉，您不能添加附件到此文章。"
 msgid "https://wordpress.org/plugins/"
 msgstr "https://cn.wordpress.org/plugins/"
 
+#: wp-admin/customize.php:238
+msgid "The Customizer allows you to preview changes to your site before publishing them. You can navigate to different pages on your site within the preview. Edit shortcuts are shown for some editable elements. The Customizer is intended for use with non-block themes."
+msgstr "用户自定功能允许你预览你网站上的变更的发布信息。 在预览模式中你可以浏览不同的页面。编辑捷径显示可以编辑的元素；点击预览模式页面中任何地方转换开关。"
+
 #: wp-admin/customize.php:72 wp-admin/customize.php:81
 msgid "Customize New Changes"
 msgstr "定制器全新变化"
@@ -5904,7 +5907,7 @@ msgstr "重复"
 #: wp-admin/options-reading.php:54 wp-admin/options-writing.php:54
 #: wp-admin/plugin-editor.php:145 wp-admin/plugin-install.php:122
 #: wp-admin/plugins.php:590 wp-admin/revision.php:158
-#: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:141
+#: wp-admin/theme-editor.php:56 wp-admin/theme-install.php:142
 #: wp-admin/themes.php:209 wp-admin/tools.php:57 wp-admin/update-core.php:1018
 #: wp-admin/upload.php:76 wp-admin/upload.php:257 wp-admin/user-edit.php:74
 #: wp-admin/user-new.php:296 wp-admin/users.php:78 wp-admin/widgets-form.php:72
@@ -6023,7 +6026,7 @@ msgstr "抱歉，您不能将用户添加到此站点网络。"
 msgid "Sorry, you are not allowed to edit this changeset."
 msgstr "抱歉，您不能编辑此变更集。"
 
-#: wp-admin/includes/ajax-actions.php:4189 wp-admin/update.php:207
+#: wp-admin/includes/ajax-actions.php:4212 wp-admin/update.php:207
 #: wp-admin/update.php:230
 msgid "Sorry, you are not allowed to update themes for this site."
 msgstr "抱歉，您不能在此站点上升级主题。"
@@ -6038,7 +6041,7 @@ msgstr "抱歉，您不能更新此站点。"
 msgid "New version available. <button class=\"button-link\" type=\"button\">Update now</button>"
 msgstr "有新版本可用。<button class=\"button-link\" type=\"button\">立即更新</button>"
 
-#: wp-admin/theme-install.php:170
+#: wp-admin/theme-install.php:171
 msgid "The Theme Installer screen requires JavaScript."
 msgstr "主题安装器需要JavaScript支持。"
 
@@ -6246,37 +6249,37 @@ msgstr "抱歉，您不能在此站点上编辑链接。"
 msgid "Sorry, you are not allowed to manage privacy options on this site."
 msgstr "抱歉，您不能管理此站点的隐私选项。"
 
-#: wp-admin/includes/ajax-actions.php:4614
+#: wp-admin/includes/ajax-actions.php:4637
 msgid "Plugin could not be deleted."
 msgstr "插件未能被删除。"
 
-#: wp-admin/includes/ajax-actions.php:4468 wp-admin/update.php:29
+#: wp-admin/includes/ajax-actions.php:4491 wp-admin/update.php:29
 #: wp-admin/update.php:57 wp-admin/update.php:80
 msgid "Sorry, you are not allowed to update plugins for this site."
 msgstr "抱歉，您不能在此站点上升级插件。"
 
-#: wp-admin/includes/ajax-actions.php:4344
-#: wp-admin/includes/ajax-actions.php:4453
-#: wp-admin/includes/ajax-actions.php:4561
+#: wp-admin/includes/ajax-actions.php:4367
+#: wp-admin/includes/ajax-actions.php:4476
+#: wp-admin/includes/ajax-actions.php:4584
 msgid "No plugin specified."
 msgstr "未指定插件。"
 
-#: wp-admin/includes/ajax-actions.php:4320
+#: wp-admin/includes/ajax-actions.php:4343
 msgid "Theme could not be deleted."
 msgstr "主题未能被删除。"
 
-#: wp-admin/includes/ajax-actions.php:4282
+#: wp-admin/includes/ajax-actions.php:4305
 msgid "Sorry, you are not allowed to delete themes on this site."
 msgstr "抱歉，您不能在此站点上删除主题。"
 
-#: wp-admin/includes/ajax-actions.php:4065 wp-admin/theme-install.php:16
+#: wp-admin/includes/ajax-actions.php:4085 wp-admin/theme-install.php:16
 #: wp-admin/update.php:258 wp-admin/update.php:300 wp-admin/update.php:334
 msgid "Sorry, you are not allowed to install themes on this site."
 msgstr "抱歉，您不能在此站点上安装主题。"
 
-#: wp-admin/includes/ajax-actions.php:4052
-#: wp-admin/includes/ajax-actions.php:4175
-#: wp-admin/includes/ajax-actions.php:4270
+#: wp-admin/includes/ajax-actions.php:4072
+#: wp-admin/includes/ajax-actions.php:4198
+#: wp-admin/includes/ajax-actions.php:4293
 msgid "No theme specified."
 msgstr "未指定主题。"
 
@@ -6429,7 +6432,7 @@ msgstr "新主题已启用。"
 msgid "Settings saved and theme activated."
 msgstr "设置已保存，主题已启用。"
 
-#: wp-admin/freedoms.php:96 wp-admin/theme-install.php:108
+#: wp-admin/freedoms.php:96 wp-admin/theme-install.php:109
 #: wp-admin/themes.php:157
 msgid "https://wordpress.org/themes/"
 msgstr "https://cn.wordpress.org/themes/"
@@ -6742,7 +6745,7 @@ msgid "(Currently set to: %s)"
 msgstr "（当前设置为：%s）"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:383
+#: wp-admin/about.php:408
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>版本%s</strong>修正了一个安全问题。"
 
@@ -6754,15 +6757,15 @@ msgstr "https://cn.gravatar.com/"
 msgid "Profile Picture"
 msgstr "资料图片"
 
-#: wp-admin/about.php:44 wp-admin/about.php:380
+#: wp-admin/about.php:44 wp-admin/about.php:405
 msgid "Maintenance and Security Releases"
 msgstr "维护和安全更新"
 
-#: wp-admin/about.php:377
+#: wp-admin/about.php:402
 msgid "Security Releases"
 msgstr "安全更新"
 
-#: wp-admin/about.php:374
+#: wp-admin/about.php:399
 msgid "Maintenance Releases"
 msgstr "维护更新"
 
@@ -6829,11 +6832,11 @@ msgstr "%s样式表未包含合法的主题头部。"
 msgid "The theme is missing the %s stylesheet."
 msgstr "主题缺少%s样式表。"
 
-#: wp-admin/theme-install.php:204
+#: wp-admin/theme-install.php:205
 msgid "If you have marked themes as favorites on WordPress.org, you can browse them here."
 msgstr "如果您在WordPress.org上将某主题标记为“最爱”，您即可以在这里浏览它们。"
 
-#: wp-admin/theme-install.php:187
+#: wp-admin/theme-install.php:188
 msgctxt "themes"
 msgid "Favorites"
 msgstr "最爱"
@@ -6941,11 +6944,11 @@ msgstr "筛选媒体项目列表"
 msgid "Install Parent Theme"
 msgstr "安装父主题"
 
-#: wp-admin/theme-install.php:248 wp-admin/network/themes.php:333
+#: wp-admin/theme-install.php:249 wp-admin/network/themes.php:333
 msgid "Themes list"
 msgstr "主题列表"
 
-#: wp-admin/theme-install.php:177 wp-admin/network/themes.php:331
+#: wp-admin/theme-install.php:178 wp-admin/network/themes.php:331
 msgid "Filter themes list"
 msgstr "筛选主题列表"
 
@@ -7304,7 +7307,7 @@ msgstr "评论（%s）"
 msgid "Comments (%1$s) on &#8220;%2$s&#8221;"
 msgstr "“%2$s”的评论（%1$s）"
 
-#: wp-admin/includes/ajax-actions.php:5404
+#: wp-admin/includes/ajax-actions.php:5427
 msgid "Sorry, you are not allowed to modify themes."
 msgstr "抱歉，您不能编辑评论。"
 
@@ -7389,7 +7392,7 @@ msgid "%s comment"
 msgid_plural "%s comments"
 msgstr[0] "%s 条评论"
 
-#: wp-admin/includes/ajax-actions.php:3903
+#: wp-admin/includes/ajax-actions.php:3923
 msgid "Image could not be processed."
 msgstr "图片不能被处理。"
 
@@ -7499,16 +7502,16 @@ msgstr "例子：www.wordpress.org"
 msgid "The search for installed themes will search for terms in their name, description, author, or tag."
 msgstr "搜索已安装的主题将根据主题的名字、描述、作者或标签来搜索。"
 
-#: wp-admin/theme-install.php:111
+#: wp-admin/theme-install.php:112
 msgid "Alternately, you can browse the themes that are Popular or Latest. When you find a theme you like, you can preview it or install it."
 msgstr "除此以外，您可以浏览热门和最新的主题。找到您喜欢的主题后，您可以预览或安装它。"
 
-#: wp-admin/theme-install.php:110
+#: wp-admin/theme-install.php:111
 msgid "You can Search for themes by keyword, author, or tag, or can get more specific and search by criteria listed in the feature filter."
 msgstr "您可以使用关键词、作者名称或标签搜索主题，也可以更具体地按特性筛选器中所列出的条件进行搜索。"
 
 #. translators: %d: Number of themes.
-#: wp-admin/theme-install.php:68 wp-admin/themes.php:235
+#: wp-admin/theme-install.php:69 wp-admin/themes.php:235
 msgid "Number of Themes found: %d"
 msgstr "找到的主题数：%d"
 
@@ -7599,7 +7602,7 @@ msgstr "您可以通过点击 “注销除此之外的所有会话”按钮来�
 msgid "New translations are available."
 msgstr "有新的翻译可用。"
 
-#: wp-admin/theme-install.php:470
+#: wp-admin/theme-install.php:473
 msgid "This theme has not been rated yet."
 msgstr "此主题未被评级。"
 
@@ -7866,19 +7869,19 @@ msgid "Filter by comment type"
 msgstr "按评论类型筛选"
 
 #. translators: %s: User's display name.
-#: wp-admin/includes/ajax-actions.php:3878
+#: wp-admin/includes/ajax-actions.php:3898
 msgid "%s has been logged out."
 msgstr "已成功注销%s的会话。"
 
-#: wp-admin/includes/ajax-actions.php:3874
+#: wp-admin/includes/ajax-actions.php:3894
 msgid "You are now logged out everywhere else."
 msgstr "您已成功注销除此之外的所有会话。"
 
-#: wp-admin/includes/ajax-actions.php:3865
+#: wp-admin/includes/ajax-actions.php:3885
 msgid "Could not log out user sessions. Please try again."
 msgstr "无法注销用户会话，请重试。"
 
-#: wp-admin/includes/ajax-actions.php:3752
+#: wp-admin/includes/ajax-actions.php:3772
 msgid "This preview is unavailable in the editor."
 msgstr "此预览在编辑器中不可用。"
 
@@ -8063,7 +8066,7 @@ msgid "Beta Testing"
 msgstr "Beta测试"
 
 #. translators: %s: URL that could not be embedded.
-#: wp-admin/includes/ajax-actions.php:3718
+#: wp-admin/includes/ajax-actions.php:3738
 msgid "%s failed to embed."
 msgstr "嵌入%s失败。"
 
@@ -8071,7 +8074,7 @@ msgstr "嵌入%s失败。"
 msgid "If you reach out to us, we'll also ensure you'll never have this problem again."
 msgstr "如果您联系我们，我们也将尽力确保您不再遇到此问题。"
 
-#: wp-admin/theme-install.php:242
+#: wp-admin/theme-install.php:243
 msgid "Filtering by:"
 msgstr "筛选条件："
 
@@ -8113,12 +8116,12 @@ msgid "All comment types"
 msgstr "全部评论类型"
 
 #: wp-admin/includes/class-wp-theme-install-list-table.php:66
-#: wp-admin/theme-install.php:186
+#: wp-admin/theme-install.php:187
 msgctxt "themes"
 msgid "Latest"
 msgstr "最新"
 
-#: wp-admin/theme-install.php:185
+#: wp-admin/theme-install.php:186
 msgctxt "themes"
 msgid "Popular"
 msgstr "热门"
@@ -8148,16 +8151,16 @@ msgstr "“<strong>删除</strong>”链接会带您到“删除用户”确认�
 msgid "<strong>Remove</strong> allows you to remove a user from your site. It does not delete their content. You can also remove multiple users at once by using bulk actions."
 msgstr "点击“<strong>移除</strong>”可以将用户从您的站点中移除。该操作不会删除用户之前所发布的内容。您也可以通过批量操作功能一次移除多个用户。"
 
-#: wp-admin/theme-install.php:349
+#: wp-admin/theme-install.php:350
 msgctxt "theme"
 msgid "Details &amp; Preview"
 msgstr "详情及预览"
 
-#: wp-admin/theme-install.php:58
+#: wp-admin/theme-install.php:59
 msgid "Search themes..."
 msgstr "搜索主题…"
 
-#: wp-admin/theme-install.php:57
+#: wp-admin/theme-install.php:58
 msgid "Search Themes"
 msgstr "搜索主题"
 
@@ -8392,7 +8395,7 @@ msgstr "显示上一个主题"
 msgid "Update Available"
 msgstr "更新可用"
 
-#: wp-admin/theme-install.php:56 wp-admin/themes.php:231
+#: wp-admin/theme-install.php:57 wp-admin/themes.php:231
 msgid "Add New Theme"
 msgstr "添加新主题"
 
@@ -9406,11 +9409,11 @@ msgstr "对搜索引擎的可见性"
 msgid "Welcome to WordPress %1$s. You will be redirected to the About WordPress screen. If not, click <a href=\"%2$s\">here</a>."
 msgstr "欢迎使用WordPress %1$s。我们将带您到“关于WordPress”页面。如果没有自动跳转，请<a href=\"%2$s\">点击这里</a>。"
 
-#: wp-admin/includes/plugin-install.php:378 wp-admin/theme-install.php:210
+#: wp-admin/includes/plugin-install.php:378 wp-admin/theme-install.php:211
 msgid "Get Favorites"
 msgstr "获取收藏列表"
 
-#: wp-admin/includes/plugin-install.php:376 wp-admin/theme-install.php:207
+#: wp-admin/includes/plugin-install.php:376 wp-admin/theme-install.php:208
 msgid "Your WordPress.org username:"
 msgstr "您的WordPress.org用户名："
 
@@ -9437,7 +9440,7 @@ msgctxt "Plugin Installer"
 msgid "Favorites"
 msgstr "收藏"
 
-#: wp-admin/theme-install.php:128
+#: wp-admin/theme-install.php:129
 msgid "To install the theme so you can preview it with your site&#8217;s content and customize its theme options, click the \"Install\" button at the top of the left-hand pane. The theme files will be downloaded to your website automatically. When this is complete, the theme is now available for activation, which you can do by clicking the \"Activate\" link, or by navigating to your Manage Themes screen and clicking the \"Live Preview\" link under any installed theme&#8217;s thumbnail image."
 msgstr "点击左上角“安装”按钮安装主题之后，方可使用“实时预览”功能进行主题自定义。安装后主题文件将被自动下载至您的站点。完成后，您可以使用“启用”链接直接启用主题，或转到“已安装的主题”页面，点击“实时预览”按钮来自定义并预览。"
 
@@ -9525,7 +9528,7 @@ msgid "Select Image"
 msgstr "选择图片"
 
 #: wp-admin/includes/class-wp-theme-install-list-table.php:403
-#: wp-admin/theme-install.php:542
+#: wp-admin/theme-install.php:545
 msgid "Collapse"
 msgstr "收起"
 
@@ -9551,11 +9554,11 @@ msgstr "已安装"
 msgid "Previewing and Customizing"
 msgstr "预览和自定义"
 
-#: wp-admin/theme-install.php:133
+#: wp-admin/theme-install.php:134
 msgid "Previewing and Installing"
 msgstr "预览并安装"
 
-#: wp-admin/theme-install.php:127
+#: wp-admin/theme-install.php:128
 msgid "Once you have generated a list of themes, you can preview and install any of them. Click on the thumbnail of the theme you&#8217;re interested in previewing. It will open up in a full-screen Preview page to give you a better idea of how that theme will look."
 msgstr "在主题列表生成后，您可以预览或安装其中任意一个。点击您感兴趣主题的缩略图，可打开新页面全屏预览，让您更了解启用该主题后的实际外观。"
 
@@ -9709,7 +9712,7 @@ msgid "Version:"
 msgstr "版本："
 
 #: wp-admin/includes/class-wp-theme-install-list-table.php:401
-#: wp-admin/theme-install.php:70 wp-admin/theme-install.php:540
+#: wp-admin/theme-install.php:71 wp-admin/theme-install.php:543
 msgid "Collapse Sidebar"
 msgstr "折叠边栏"
 
@@ -10128,45 +10131,46 @@ msgstr "在浏览站点时显示工具栏"
 
 #. translators: %s: HelpHub URL.
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:61 wp-admin/about.php:86 wp-admin/about.php:406
+#: wp-admin/about.php:61 wp-admin/about.php:86 wp-admin/about.php:111
+#: wp-admin/about.php:431
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "欲了解更多，参见<a href=\"%s\">发行注记</a>。"
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:49 wp-admin/about.php:400
+#: wp-admin/about.php:74 wp-admin/about.php:425
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s版本</strong>修补了安全漏洞、修正了%2$s个问题。"
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:394
+#: wp-admin/about.php:419
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s版本</strong>修补了安全漏洞、修正了%2$s个问题。"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:74 wp-admin/about.php:388
+#: wp-admin/about.php:49 wp-admin/about.php:99 wp-admin/about.php:413
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>%1$s版本</strong>修复了%2$s个问题。"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:385
+#: wp-admin/about.php:410
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>版本%s</strong>修正了一些安全问题。"
 
-#: wp-admin/about.php:379
+#: wp-admin/about.php:404
 msgid "Maintenance and Security Release"
 msgstr "维护和安全更新"
 
-#: wp-admin/about.php:376
+#: wp-admin/about.php:401
 msgid "Security Release"
 msgstr "安全更新"
 
-#: wp-admin/about.php:373
+#: wp-admin/about.php:398
 msgid "Maintenance Release"
 msgstr "维护更新"
 
@@ -10451,11 +10455,11 @@ msgstr "点击<strong>编辑</strong>可在编辑器中编辑该文章。直接�
 msgid "Because this is a multisite installation, you may add accounts that already exist on the Network by specifying a username or email, and defining a role. For more options, such as specifying a password, you have to be a Network Administrator and use the hover link under an existing user&#8217;s name to Edit the user profile under Network Admin > All Users."
 msgstr "由于当前多站点功能已经开启，您可以直接通过输入用户名或电子邮箱地址的方式将站点网络中的现有用户添加到站点中，然后为其指定用户角色。如需修改密码等其他信息，您需要拥有网络管理员的权限，访问“管理网络”>“所有用户”，然后将鼠标放置在用户名上方，点击出现的“编辑”链接。"
 
-#: wp-admin/about.php:362
+#: wp-admin/about.php:387
 msgid "Go to Dashboard &rarr; Home"
 msgstr "转到“仪表盘” &rarr; “首页”页面"
 
-#: wp-admin/about.php:359
+#: wp-admin/about.php:384
 msgid "Go to Dashboard &rarr; Updates"
 msgstr "转到“仪表盘” &rarr; “更新”页面"
 
@@ -10599,7 +10603,7 @@ msgstr "左侧的导航菜单提供了所有WordPress管理页面的链接。将
 #: wp-admin/plugin-editor.php:125 wp-admin/plugin-install.php:96
 #: wp-admin/plugins.php:544 wp-admin/revision.php:151
 #: wp-admin/site-health.php:80 wp-admin/theme-editor.php:28
-#: wp-admin/theme-install.php:121 wp-admin/themes.php:143
+#: wp-admin/theme-install.php:122 wp-admin/themes.php:143
 #: wp-admin/update-core.php:977 wp-admin/upload.php:54 wp-admin/upload.php:230
 #: wp-admin/user-edit.php:66 wp-admin/user-new.php:273 wp-admin/users.php:34
 #: wp-admin/widgets-form.php:43 wp-admin/network/index.php:34
@@ -10711,8 +10715,8 @@ msgstr "超级管理员"
 #. translators: %s: Theme version number.
 #. translators: %s: WordPress version.
 #. translators: %s: Theme version.
-#: wp-admin/includes/ajax-actions.php:4478
-#: wp-admin/includes/ajax-actions.php:4521
+#: wp-admin/includes/ajax-actions.php:4501
+#: wp-admin/includes/ajax-actions.php:4544
 #: wp-admin/includes/class-wp-debug-data.php:959
 #: wp-admin/includes/class-wp-debug-data.php:1006
 #: wp-admin/includes/class-wp-debug-data.php:1329
@@ -10766,7 +10770,7 @@ msgstr "删除站点"
 #. translators: %s: Plugin name.
 #: wp-admin/includes/class-wp-theme-install-list-table.php:492
 #: wp-admin/includes/deprecated.php:1387 wp-admin/includes/theme.php:1060
-#: wp-admin/theme-install.php:403 wp-admin/theme-install.php:440
+#: wp-admin/theme-install.php:406 wp-admin/theme-install.php:443
 #: wp-admin/includes/network.php:374
 msgid "Install"
 msgstr "安装"
@@ -10794,7 +10798,7 @@ msgstr "设置已保存。"
 #: wp-admin/options-writing.php:52 wp-admin/plugin-editor.php:142
 #: wp-admin/plugin-install.php:120 wp-admin/plugins.php:587
 #: wp-admin/revision.php:156 wp-admin/site-health.php:89
-#: wp-admin/theme-editor.php:51 wp-admin/theme-install.php:139
+#: wp-admin/theme-editor.php:51 wp-admin/theme-install.php:140
 #: wp-admin/themes.php:206 wp-admin/tools.php:55 wp-admin/update-core.php:1015
 #: wp-admin/upload.php:74 wp-admin/upload.php:255 wp-admin/user-edit.php:72
 #: wp-admin/user-new.php:294 wp-admin/users.php:75 wp-admin/widgets-form.php:70
@@ -10922,7 +10926,7 @@ msgid "Name"
 msgstr "名称"
 
 #. translators: %s: Theme Directory URL.
-#: wp-admin/theme-install.php:107
+#: wp-admin/theme-install.php:108
 msgid "You can find additional themes for your site by using the Theme Browser/Installer on this screen, which will display themes from the <a href=\"%s\">WordPress Theme Directory</a>. These themes are designed and developed by third parties, are available free of charge, and are compatible with the license WordPress uses."
 msgstr "通过主题浏览/安装器，您可以为您的站点安装其他主题。主题浏览/安装器显示的是来自<a href=\"%s\">WordPress.org主题目录</a>的主题。这些主题都是由第三方设计开发并免费提供的，且与WordPress所用的许可证相兼容。"
 
@@ -11047,7 +11051,7 @@ msgstr "第%1$s页，共%2$s页"
 msgid "%s Page Template"
 msgstr "%s页面模板"
 
-#: wp-admin/includes/ajax-actions.php:4583 wp-admin/plugins.php:624
+#: wp-admin/includes/ajax-actions.php:4606 wp-admin/plugins.php:624
 msgid "You cannot delete a plugin while it is active on the main site."
 msgstr "您不能删除主站点正在使用的插件。"
 
@@ -11193,7 +11197,7 @@ msgstr "升级插件"
 msgid "Theme updated successfully."
 msgstr "主题升级成功。"
 
-#: wp-admin/includes/ajax-actions.php:4249
+#: wp-admin/includes/ajax-actions.php:4272
 #: wp-admin/includes/class-theme-upgrader.php:63
 #: wp-admin/includes/class-theme-upgrader.php:100
 msgid "Theme update failed."
@@ -11204,7 +11208,7 @@ msgstr "主题升级失败。"
 msgid "Plugin updated successfully."
 msgstr "插件升级成功。"
 
-#: wp-admin/includes/ajax-actions.php:4540
+#: wp-admin/includes/ajax-actions.php:4563
 #: wp-admin/includes/class-plugin-upgrader.php:64
 #: wp-admin/includes/class-plugin-upgrader.php:91
 msgid "Plugin update failed."
@@ -11311,7 +11315,7 @@ msgstr "请选择需要升级的主题。"
 msgid "The update process is starting. This process may take a while on some hosts, so please be patient."
 msgstr "正开始升级。这个过程在某些服务器上花的时间要长些，请耐心等待。"
 
-#: wp-admin/theme-install.php:216 wp-admin/theme-install.php:238
+#: wp-admin/theme-install.php:217 wp-admin/theme-install.php:239
 msgid "Apply Filters"
 msgstr "应用过滤器"
 
@@ -11505,7 +11509,7 @@ msgid "Your profile contains information about you (your &#8220;account&#8221;) 
 msgstr "您的个人资料包含您的个人信息和账户信息，以及使用WordPress的偏好设置。"
 
 #. translators: %s: /wp-content/themes
-#: wp-admin/theme-install.php:114
+#: wp-admin/theme-install.php:115
 msgid "You can Upload a theme manually if you have already downloaded its ZIP archive onto your computer (make sure it is from a trusted and original source). You can also do it the old-fashioned way and copy a downloaded theme&#8217;s folder via FTP into your %s directory."
 msgstr "您可以手动上传从别处下载的.zip主题压缩包文件（请确认其来源可靠）；也可以使用传统方式，将下载的主题文件通过FTP拷贝至您网站的%s目录中。"
 
@@ -12249,7 +12253,7 @@ msgstr "WordPress更新"
 msgid "Edit menu item"
 msgstr "编辑菜单项"
 
-#: wp-admin/about.php:362 wp-admin/includes/network.php:148
+#: wp-admin/about.php:387 wp-admin/includes/network.php:148
 msgid "Go to Dashboard"
 msgstr "转到“仪表盘”页面"
 
@@ -12590,8 +12594,8 @@ msgstr "您的WordPress数据库已经是最新的了！"
 msgid "Installing theme from uploaded file: %s"
 msgstr "正在安装您上传的主题：%s"
 
-#: wp-admin/theme-install.php:59 wp-admin/theme-install.php:161
-#: wp-admin/theme-install.php:163 wp-admin/update.php:308
+#: wp-admin/theme-install.php:60 wp-admin/theme-install.php:162
+#: wp-admin/theme-install.php:164 wp-admin/update.php:308
 msgid "Upload Theme"
 msgstr "上传主题"
 
@@ -12819,7 +12823,7 @@ msgstr "插件文件"
 msgid "Select plugin to edit:"
 msgstr "选择要编辑的插件："
 
-#: wp-admin/includes/ajax-actions.php:4751 wp-admin/plugin-editor.php:185
+#: wp-admin/includes/ajax-actions.php:4774 wp-admin/plugin-editor.php:185
 #: wp-admin/theme-editor.php:190
 msgid "File edited successfully."
 msgstr "文件修改成功。"
@@ -13511,7 +13515,7 @@ msgid "This theme is already installed."
 msgstr "该主题已安装。"
 
 #. translators: %s: Theme version.
-#: wp-admin/includes/theme.php:839 wp-admin/theme-install.php:476
+#: wp-admin/includes/theme.php:839 wp-admin/theme-install.php:479
 #: wp-admin/themes.php:957
 msgid "Version: %s"
 msgstr "版本：%s"
@@ -13572,7 +13576,7 @@ msgstr "两栏"
 msgid "One Column"
 msgstr "一栏"
 
-#: wp-admin/includes/theme-install.php:139 wp-admin/theme-install.php:190
+#: wp-admin/includes/theme-install.php:139 wp-admin/theme-install.php:191
 msgid "Feature Filter"
 msgstr "特性筛选"
 
@@ -14920,7 +14924,7 @@ msgstr "LiveJournal"
 
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:294
 #: wp-admin/includes/class-wp-theme-install-list-table.php:159
-#: wp-admin/setup-config.php:277 wp-admin/theme-install.php:66
+#: wp-admin/setup-config.php:277 wp-admin/theme-install.php:67
 msgid "Try Again"
 msgstr "重试"
 
