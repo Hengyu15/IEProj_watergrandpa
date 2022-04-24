@@ -130,39 +130,39 @@ class Quiz_Maker_Settings_Actions {
             $quiz_enable_question_answers = (isset( $_REQUEST['ays_quiz_enable_question_answers'] ) && sanitize_text_field( $_REQUEST['ays_quiz_enable_question_answers'] ) == 'on') ? 'on' : 'off';
 
             $options = array(
-                "question_default_type"    => $question_default_type,
-                "ays_answer_default_count" => $ays_answer_default_count,
-                "right_answer_sound"       => $right_answer_sound,
-                "wrong_answer_sound"       => $wrong_answer_sound,
-                "question_title_length"    => $question_title_length,
-                "quizzes_title_length"     => $quizzes_title_length,
-                "results_title_length"     => $results_title_length,
-                "disable_user_ip"          => $disable_user_ip,
-                "quiz_animation_top"       => $quiz_animation_top,
-                "quiz_enable_animation_top" => $quiz_enable_animation_top,
-                "question_default_category" => $question_default_category,
-                "all_results_show_publicly" => $all_results_show_publicly,
-                "quiz_all_results_show_publicly" => $quiz_all_results_show_publicly,
+                "question_default_type"                 => $question_default_type,
+                "ays_answer_default_count"              => $ays_answer_default_count,
+                "right_answer_sound"                    => $right_answer_sound,
+                "wrong_answer_sound"                    => $wrong_answer_sound,
+                "question_title_length"                 => $question_title_length,
+                "quizzes_title_length"                  => $quizzes_title_length,
+                "results_title_length"                  => $results_title_length,
+                "disable_user_ip"                       => $disable_user_ip,
+                "quiz_animation_top"                    => $quiz_animation_top,
+                "quiz_enable_animation_top"             => $quiz_enable_animation_top,
+                "question_default_category"             => $question_default_category,
+                "all_results_show_publicly"             => $all_results_show_publicly,
+                "quiz_all_results_show_publicly"        => $quiz_all_results_show_publicly,
 
                 // All results
-                "all_results_columns"       => $all_results_columns,
-                "all_results_columns_order" => $all_results_columns_order,
+                "all_results_columns"                   => $all_results_columns,
+                "all_results_columns_order"             => $all_results_columns_order,
 
                 // Quiz All results
-                "quiz_all_results_columns"        => $quiz_all_results_columns,
-                "quiz_all_results_columns_order"  => $quiz_all_results_columns_order,
+                "quiz_all_results_columns"              => $quiz_all_results_columns,
+                "quiz_all_results_columns_order"        => $quiz_all_results_columns_order,
 
-                "quiz_enable_question_allow_html" => $quiz_enable_question_allow_html,
-                "enable_start_button_loader"      => $enable_start_button_loader,
-                "quiz_wp_editor_height"           => $quiz_wp_editor_height,
-                "quiz_textarea_height"            => $quiz_textarea_height,
+                "quiz_enable_question_allow_html"       => $quiz_enable_question_allow_html,
+                "enable_start_button_loader"            => $enable_start_button_loader,
+                "quiz_wp_editor_height"                 => $quiz_wp_editor_height,
+                "quiz_textarea_height"                  => $quiz_textarea_height,
 
-                "quiz_show_quiz_button_to_admin_only" => $quiz_show_quiz_button_to_admin_only,
-                "question_categories_title_length"    => $question_categories_title_length,
-                "quiz_categories_title_length"        => $quiz_categories_title_length,
-                "quiz_reviews_title_length"           => $quiz_reviews_title_length,
-                "quiz_exclude_general_css"            => $quiz_exclude_general_css,
-                "quiz_enable_question_answers"        => $quiz_enable_question_answers,
+                "quiz_show_quiz_button_to_admin_only"   => $quiz_show_quiz_button_to_admin_only,
+                "question_categories_title_length"      => $question_categories_title_length,
+                "quiz_categories_title_length"          => $quiz_categories_title_length,
+                "quiz_reviews_title_length"             => $quiz_reviews_title_length,
+                "quiz_exclude_general_css"              => $quiz_exclude_general_css,
+                "quiz_enable_question_answers"          => $quiz_enable_question_answers,
             );
             
             $del_stat = "";

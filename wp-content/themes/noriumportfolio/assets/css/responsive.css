@@ -1,0 +1,1457 @@
+/*==========responsive===============*/
+
+        /*large devices */
+
+        @media only screen and (min-width:1551px) and (max-width:1800px){
+
+            .banner-section .thumbbail-wrap { position: absolute!important;right: 35px!important;top: 265px!important; width: 58%!important;}
+
+            .side-thumbnail::before {position: absolute;top: -33px;left: 105px;width: 86%;height: 100%;transform: rotate(8deg);}
+
+            .side-thumbnail:after {position: absolute;top: 74px; right: -30px;width: 100%; height: 120%;transform: rotate(0deg);}
+
+            .thumbbail-wrap .shape-white { position: absolute;bottom: -190px;right: -15px;}
+
+            .thumbbail-wrap .shape-dark { position: absolute;bottom: -190px;right: -15px;}
+
+            .aboutus-section .aboutus-thumb-section { width: 32%;left: 13.5%;}
+
+            .aboutus-section .aboutus-content {padding-right: 14%;}
+
+            .service-section .container .service-box-single{ margin-bottom: 25px!important;}
+
+            .portfolio-section .shape.port-shape-6 {position: absolute;bottom: 0; left: 15%;}
+
+            .pricing-section .pricing-shape.pricing-shape-1, .pricing-shape.pricing-shape-4 {position: absolute;left: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-2, .pricing-shape.pricing-shape-3 {position: absolute;right: 0;}
+
+            .contact-section .shape.port-shape-3 {position: absolute; top: 15%;}       
+
+            .contact-section .shape.port-shape-2 {position: absolute; right: 0;}
+
+            .footer-section .footer-shape-2 {position: absolute;top: 0;left: 20%;}       
+
+        }
+
+        /*large devices */
+
+        @media only screen and (min-width:1400px) and (max-width:1550px){
+
+            .banner-section .thumbbail-wrap { position: absolute!important;right: 110px!important;top: 265px!important; width: 34%!important;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .banner-section .shape.ball-22{position: absolute; top: 18%; left: 0;}
+
+            .thumbbail-wrap .side-thumbnail:before { position: absolute; left: 0px;top: 0; width: 60%; transform: rotate(338deg);animation: none; }
+
+            .thumbbail-wrap .side-thumbnail:after { position: absolute;right: 110px; top: 9px; width: 60%; transform: rotate(16deg); animation: none;}
+
+            .thumbbail-wrap .shape-white { position: absolute; bottom: -102px; right: -24px;}
+
+            .thumbbail-wrap .shape-dark { position: absolute; bottom: -102px; right: -24px;}
+
+            .aboutus-section .aboutus-thumb-section { width: 32%;left: 14.5%;}
+
+            .aboutus-section .aboutus-content {padding-right: 11%;}
+
+            .service-section .container .service-box-single{margin-bottom: 25px!important;}
+
+            .pricing-section .pricing-shape{width: 120px; height: auto;}
+
+            .pricing-section .pricing-shape.pricing-shape-1{position: absolute; top: 18%; left: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-2{position: absolute; bottom: 0; right: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-3{position: absolute; right: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-4{position: absolute; left: 0;}
+
+            .portfolio-section .shape.port-shape-6{position: absolute; left: 0;}
+
+            .portfolio-section .shape.port-shape-2{position: absolute; right: 0;}
+
+            .resume-section .resume-shape-2 { position: absolute; left: 0;}
+
+            .resume-section .resume-shape-3 { position: absolute; bottom: -35px;}
+
+            .contact-section .shape.port-shape-3 {position: absolute;top: 15%;}
+
+            .footer-section .footer-shape-2 {position: absolute; top: -50px;left: 20%;}
+
+       
+
+        }
+
+        /*large devices */
+
+        @media only screen and (min-width:1200px) and (max-width:1399px){
+
+            .banner-section .thumbbail-wrap { position: absolute!important;  right: -18px!important; top: 265px!important; width: 37%!important;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .banner-section .shape.ball-22{position: absolute; top: 18%; left: 0;}
+
+            .thumbbail-wrap .side-thumbnail:before { position: absolute; left: 0px;top: 0; width: 60%; transform: rotate(338deg);animation: none; }
+
+            .thumbbail-wrap .side-thumbnail:after { position: absolute;right: 110px; top: 9px; width: 60%; transform: rotate(16deg); animation: none;}
+
+            .thumbbail-wrap .shape-white { position: absolute; bottom: -97px; right: 24px;}
+
+            .thumbbail-wrap .shape-dark { position: absolute; bottom: -97px; right: 24px;}
+
+            .aboutus-thumb-section {width: 37%;left: 10%; }
+
+            .aboutus-section .aboutus-content {padding-right: 7%;}
+
+            .resume-section .resume-shape-2 {position: absolute;left: 0;}
+
+            .resume-section .resume-shape-3 {position: absolute;bottom: -35px;}
+
+            .service-section .container .service-box-single{ margin-bottom: 25px!important;}
+
+            .service-section .shape.srv-shape-2, .shape.srv-shape-6{ display: none;}
+
+            .service-section .shape.srv-shape-4{ position: absolute; right: 0;}
+
+            .service-section .shape.srv-shape-7{position: absolute; left: 0;}
+
+            .portfolio-section .shape.port-shape-6 {position: absolute; bottom: 0;}
+
+            .portfolio-section .shape.port-shape-7 {position: absolute; left: 0;}
+
+            .pricing-section .pricing-shape{width: 100px;}
+
+            .pricing-section .pricing-shape.pricing-shape-1{position: absolute; top: 18%;left: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-2 {position:absolute; bottom: 0;right: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-3 {position:absolute; right: 0; top: 10%;}
+
+            .pricing-section .pricing-shape.pricing-shape-4{position: absolute; left: 0;}
+
+            .test-content .quote-icon i {position: absolute;top: -32px; left: 0;}
+
+            .contact-section .shape.port-shape-2 { display: none;}
+
+            .contact-section .shape.port-shape-4 { position: absolute; right: 0;}
+
+            .contact-section .shape.port-shape-7 { position: absolute; left: 0;}
+
+            .footer-section .footer-shape-1{display: none;}
+
+            .footer-section .footer-shape-2{position: absolute; top: 0; left: 22%;}
+
+            .footer-section .footer-shape-5{position: absolute; top: 60%; left:50px;}
+
+       
+
+        }
+
+         /*tablet lay out*/
+
+        @media only screen and (min-width:992px) and (max-width:1199px){
+
+            .section-padding{padding: 60px 0!important;}
+
+            .top-spacing{padding-top: 60px!important;}
+
+            h1 {font-size: 60px!important; line-height: 70px!important;}
+
+            h2{font-size: 30px!important; line-height: 40px;}
+
+            h2 span{font-size: 30px!important; line-height: 40px;}
+
+            .b-primary { padding: 15px 35px!important;}
+
+            .main-header .main-menu{display: none;}
+
+            .banner-section { padding-top: 210px!important;}
+
+            .banner-section .thumbbail-wrap { position: absolute!important;  right: -18px!important; top: 265px!important; width: 44%!important;}
+
+            .banner-section .ball-11{position: absolute; top: 22%;}
+
+            .banner-section .shape.ball-2, .shape.ball-22{display: none;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .thumbbail-wrap .side-thumbnail:before { position: absolute; left: 0px;top: 0; width: 60%; transform: rotate(338deg);animation: none; }
+
+            .thumbbail-wrap .side-thumbnail:after { position: absolute;right: 110px; top: 0; width: 60%; transform: rotate(16deg); animation: none;}
+
+            .thumbbail-wrap .shape-white { position: absolute; bottom: -90px; right: 8px;}
+
+            .thumbbail-wrap .shape-dark { position: absolute; bottom: -90px; right: 8px;}
+
+            .aboutus-thumb-section {width: 36%;left: 9%; }
+
+            .aboutus-section .aboutus-content {padding-right: 0;}
+
+            .aboutus-thumb-section .aboutus-thumb { position: absolute; top: 21px;}
+
+            .resume-section .resume-inner .experience-single-inner:before { position: absolute; left: 118%; }
+
+            .resume-section .resume-inner .experience-single-inner:after { position: absolute;left: 130%; }
+
+            .resume-section .resume-inner .resume-single-inner:after {position: absolute; right: 109%; }
+
+            .resume-section .resume-shape-2{display: none; }
+
+            .resume-section .resume-shape-3{position: absolute; bottom: -35px;}
+
+            .service-section .shape.srv-shape-5{display: none;}
+
+            .service-section .shape.srv-shape-8{position: absolute; top: 13%;}
+
+            .service-section .shape.srv-shape-2, .shape.srv-shape-3, .shape.srv-shape-4,.shape.srv-shape-6, .shape.srv-shape-7{display: none;}
+
+            .portfolio-section .portfolio-single {width: 45%; height: auto; }
+
+            .portfolio-section .shape.port-shape-7{display: none; }
+
+            .portfolio-section .shape.port-shape-2{position: absolute; right: 0;}
+
+            .testimonial-section{margin-top: 60px;}
+
+            .test-content.pos-relative { padding-top: 50px;}
+
+            .test-content .quote-icon i { position: absolute;top: 5px;}
+
+            .test-shape-section .test-shape-1 {position: absolute;top: 32%;}
+
+            .test-shape-section .test-shape-2 {position: absolute;left: 1%;}
+
+            .test-shape-section .test-shape-3 {position: absolute;bottom: 22.5%;}
+
+            .test-shape-section .test-shape-4 {position: absolute;right: 15%;}
+
+            .test-shape-section .test-shape-5 { position: absolute;top: 32%; }
+
+            .test-shape-section .test-shape-7 { display: none; }
+
+            .test-shape-section .test-shape-8 { display: none;  }
+
+            .test-shape-section .test-shape-6 {position: absolute;top: 32%; }
+
+            .test-shape-section .test-shape-9 {position: absolute;bottom: 22.5%;}
+
+            .test-shape-section .test-shape-10 {position: absolute; bottom: 22.5%;}
+
+            .pricing-section .pricing-shape.pricing-shape{width: 100px; height: auto;}
+
+            .pricing-section .pricing-shape.pricing-shape-1{position: absolute; top: 15%; left: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-2{position: absolute; right: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-3{position: absolute; right: 0; top: 10%; width: 100px;}
+
+            .pricing-section .pricing-shape.pricing-shape-4{position: absolute; bottom: 15%; left: 0;}
+
+            .blog-single .blog-title {position: absolute; left: 18px; }
+
+            .blog-single  .blog-single-overly { padding: 10px 22px; }
+
+            .blog-single-overly .text-white.pb-40{padding-bottom: 15px;}
+
+            .blog-single-overly .btn-theme.pb-20{padding-bottom: 10px;}
+
+            .blog-single-overly  .meta-desc.pt-20{padding-top: 10px;}
+
+            .blog-single-overly .meta-desc .blog-date:after {position: absolute; right: -35px;}
+
+            .contact-section .shape.port-shape-3 {position: absolute;right: 0; top: 14%;}
+
+            .contact-section .shape.port-shape-8 {position: absolute;top: 13%;right: 32%;}
+
+            .contact-section .shape.port-shape-2, .shape.port-shape-4, .shape.port-shape-5,.shape.port-shape-7{display: none;}
+
+            .footer-child .footer-social ul li { padding-right: 5px; }
+
+            .footer-child .footer-contact ul li a{ font-size: 15px;}
+
+            .footer-section .footer-shape-1, .footer-shape-5{display: none;}
+
+            .footer-section .footer-shape-2{position: absolute; top: 0; left: 22%;}
+
+            .testimonial-section .slider .next-arrow {position: absolute;bottom: 80px; right: 80px; height: 50px; line-height: 50px;}
+
+            .testimonial-section .slider .prev-arrow {position: absolute;  bottom: 80px; right: 0px; height: 50px; line-height: 50px;}
+
+
+
+        }	
+
+        /*mobile layout */
+
+        @media only screen and (min-width:768px) and (max-width:991px){
+
+            .section-padding{padding: 70px 0!important;}
+
+            .top-spacing{padding-top: 70px!important;}
+
+            .pb-60 {padding-bottom: 40px!important;}
+
+            h1 {font-size: 50px!important; line-height: 60px!important;}
+
+            h2 span{font-size: 20px!important;line-height: 30px!important;}
+
+            .resume-section span.d-block { font-size: 14px;}
+
+            h4 {font-size: 20px!important; line-height: 30px!important;}
+
+            .b-primary { padding: 15px 35px!important;}
+
+            .main-header .main-menu{display: none;}
+
+            .banner-section{padding-top: 210px!important;}
+
+            .banner-section .thumbbail-wrap {position: absolute!important;top: 342px!important;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .thumbbail-wrap .side-thumbnail:before { position: absolute; left: 45px; top: -15px; width: 60%; transform: rotate(349deg);animation: none; }
+
+            .thumbbail-wrap .side-thumbnail:after { position: absolute;right: 87px; top: -15px; width: 60%; transform: rotate(16deg); animation: none;}
+
+            .thumbbail-wrap .shape-white { position: absolute; bottom: -74px; right: -23px;}
+
+            .thumbbail-wrap .shape-dark { position: absolute; bottom: -74px; right: -23px;}
+
+            .banner-section .thumbbail-wrap { position: absolute!important;  right: -18px!important; top: 300px!important; }
+
+            .banner-section .banner-content {padding-right: 45%;}
+
+            .banner-section .ball-2{display: none;}
+
+            .banner-section .ball-22 {position: absolute;top: 19%;left: 0;}
+
+            .aboutus-thumb-section .aboutus-thumb { position: absolute; top: 25px;}
+
+            .aboutus-thumb-section {width: 55%;left: 4%;}
+
+            .aboutus-bg-heading{position:absolute; top:28px; left: 22px; z-index: -1;}
+
+            .aboutus-section .aboutus-content{width:100%; height: auto; margin-left: 0!important; box-shadow: none; background: none; padding: 50px 230px 0 25px;}
+
+            .aboutus-section .shape-3{display: none;}
+
+            .resume-section .resume-inner .experience-single {padding: 20px 30px; }
+
+            .resume-section .resume-inner .resume-single {padding: 20px 30px; }
+
+            .resume-section .resume-inner .experience-single-inner:before { position: absolute; left: 114%; }
+
+            .resume-section .resume-inner .experience-single-inner:after { position: absolute;left: 129%; }
+
+            .resume-section .resume-inner .resume-single-inner:after {position: absolute; right: 112%; }
+
+            .resume-section .resume-shape-2{position: absolute; left: 0; }
+
+            .nav-link.b-primary{margin-right: 10px;}
+
+            .service-section .shape.srv-shape-2, .shape.srv-shape-3, .shape.srv-shape-4{position: absolute; right: 0;}
+
+            .service-section .shape.srv-shape-5{position: absolute; top: 6%; left: 45%;}
+
+            .service-section .shape.srv-shape-6, .shape.srv-shape-7{position: absolute; left: 0;}
+
+            .service-section .shape.srv-shape-8{position: absolute; right: 0; top: 10%;}
+
+            .test-bg-heading{position:absolute; left: 200px;}
+
+            .testimonial-section{padding-bottom: 0; margin-top: 0; background: none;}
+
+            .dark-mode .testimonial-section{ background: none;}
+
+            .test-content .quote-icon i { position: absolute;top: -10px; left: -15px;}
+
+            .test-shape-section .test-shape{display: none;}
+
+            .blog-single-overly .meta-desc .blog-date:after {position: absolute; right: -55px;}
+
+            .portfolio-section .menu-section{width: 30%; height: auto;}
+
+            .portfolio-section .portfolio-items-wrapper{width: 70%; height: auto;}
+
+            .portfolio-items .portfolio-single{width: 45%;height: auto;}
+
+            .portfolio-items .portfolio-single .portfolio-content .play-btn i {width: 45px; height: 30px;line-height: 25px;margin-bottom: 10px;}
+
+            .portfolio-items .portfolio-single .d-block.text-white{font-size: 14px;}
+
+            .portfolio-items .portfolio-content .title.text-white.pt-20{padding: 0; font-size: 16px!important;}
+
+            .portfolio-section .shape.port-shape-3{position: absolute; top: 15%; right: 0;}
+
+            .portfolio-section .shape.port-shape-5{position: absolute; left: 80%;}
+
+            .portfolio-section .shape.port-shape-6, .shape.port-shape-7{ display: none;}
+
+            .portfolio-section .shape.port-shape-8{position: absolute; right: 80%;}
+
+            .pricing-section .pricing-shape{width: 100px;}
+
+            .pricing-section .pricing-shape.pricing-shape-1{position: absolute; top: 13%; left: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-2{position: absolute; right: 0;}
+
+            .pricing-section .pricing-shape.pricing-shape-3{position: absolute; right: 0; top: 13%;}
+
+            .pricing-section .pricing-shape.pricing-shape-4{position: absolute; left: 0;}
+
+            .contact-section .shape.port-shape-1{ position: absolute; top: 0; left: 0;}
+
+            .contact-section .shape.port-shape-2, .shape.port-shape-3, .shape.port-shape-4{ position: absolute; right: 0;}
+
+            .contact-section .shape.port-shape-5{ position: absolute; left: 80%;}
+
+            .contact-section .shape.port-shape-6 {position: absolute; bottom: 6%;}
+
+            .contact-section .shape.port-shape-8{ position: absolute; right: 45%;}
+
+            .footer-section .footer-child {text-align: center;}
+
+            .footer-section .footer-shape-1, .footer-shape-5{display: none;}
+
+            .darkmode span {position: absolute;top: 50px; right: -50px;}
+
+            .testimonial-section .slider .next-arrow {position: absolute; bottom: 25px; right: 50%;}
+
+            .testimonial-section .slider .prev-arrow {position: absolute; bottom: 25px; right: 39%;}
+
+        }
+
+
+
+@media only screen  and (max-width:767px){
+
+.main-navigation ul {
+
+    display: none !important;
+
+}
+.menu-menu-1-container .menu.nav-menu {
+    position: fixed;
+    top: 0;
+    width: 60%;
+    left: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: 999;
+}
+.main-navigation ul li a {
+    color: #fff !important;
+    font-weight: 700;
+}
+.main-navigation ul ul {
+    background: var(--main-color) !important;
+    width: 100%;
+}
+
+.main-navigation ul ul a {
+    width: auto !important;
+}
+.main-navigation ul li a {
+   padding: 20px 10px;
+    border-bottom: 1px solid #fff;
+}
+.site-branding {
+    margin-top: 0;
+    padding: 20px 0;
+}
+
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children:before {
+  position: absolute;
+  right: 2%;
+  top: 0;
+  content: "+";
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+}
+.menu-item-has-children.focus:before{
+    opacity: 0;
+    visibility: hidden;
+}
+.menu-item-has-children:after {
+  position: absolute;
+  right: 2%;
+  top: 0;
+  content: "-";
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-item-has-children.focus:after{
+    visibility: visible;
+    opacity: 1;
+}
+.main-navigation .menu-toggle {
+
+        display: block;
+
+
+        right: 17%;
+
+}
+.main-navigation .mobile-bar {
+    margin-top: 17px;
+    margin-left: 55%;
+}
+.main-header-menu {
+    padding: 0;
+}
+.main-header-menu {
+
+    position: relative;
+
+}
+
+
+
+
+
+.menu-toggle, .main-navigation.toggled ul {
+
+    display: block !important;
+
+}
+
+
+
+.main-header-menu {
+
+    box-shadow: 0 0 30px #f6e9e9;
+
+}
+
+
+
+.main-navigation.toggled .close-menu {
+
+    display: block;
+
+}
+
+.bc-close-menu i {
+
+    margin-right: 9px;
+
+}
+
+
+
+
+
+}
+
+        /*mobile layout */
+
+@media only screen and (min-width:576px) and (max-width:767px){
+
+
+
+.breadcum a, .oliva-breadcrumbs-content a {
+
+    font-size: 30px !important;
+
+}
+
+
+
+.widget h2 {
+
+    padding: 10px 0 !important;
+
+}
+
+
+
+.widget-area {
+
+    margin-top: 50px !important;
+
+}
+
+            .section-padding{padding: 70px 0!important;}
+
+            .top-spacing{padding-top: 70px!important;}
+
+            .pb-40 {padding-bottom: 30px;}
+
+            .pt-50 {padding-top: 30px;}
+
+            .pb-60 {padding-bottom: 20px!important;}
+
+            .mb-5 {margin-bottom: 1rem!important;}
+
+            h1 {font-size: 40px!important; line-height: 50px!important;}
+
+            h2 {font-size: 16px!important;line-height: 26px!important;}
+
+            h2 span{font-size: 16px!important;line-height: 26px!important;}
+
+            .resume-section span.d-block { font-size: 14px;}
+
+            h4 {font-size: 20px!important; line-height: 30px!important;}
+
+            .b-primary { padding: 15px 35px!important;}
+
+            p.banner-text{padding-left: 0!important;}
+
+            p.desc-text{border: none; padding-left: 15%; margin-bottom: 0px;}
+
+            .dark-mode p.desc-text{border: none; padding-left: 15%;}
+
+            .section-bg-heading{padding-left: 15%;}
+
+            .sidebar-tittle.pos-relative {padding-left: 15%;}
+
+            .banner-section .banner-sub-heading.text-type { font-size: 15px;line-height: 25px;}
+
+            .main-header .main-menu{display: none;}
+
+            .header-section .header-contact { width: 66%; height: auto;}
+
+            .banner-section { padding-top: 220px!important;}
+
+            .banner-section .banner-content {padding:0 10%; text-align: center;}
+
+            .banner-section .thumbbail-wrap {display: none;}
+
+            .banner-counter .counter-box {margin-right: 40px;}
+
+            .banner-counter{justify-content: center!important;}
+
+            .banner-section .ball-4 {position: absolute; top: 560px;left: 43%;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section #play-btn i{margin-left: 20px; width: 40px; height: 40px; line-height: 40px;}
+
+            .banner-section .ball-22{position: absolute; top: 20%; left: 0;}
+
+            .banner-section .ball-33{display: none;}
+
+            .banner-section .ball-11{position: absolute; left: 80%;}
+
+            .banner-section .ball-2{display: none;}
+
+            .banner-section .ball-3{display: none;}
+
+            .banner-section .ball-8{position: absolute; left: 5%;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .aboutus-thumb-section .aboutus-thumb { position: absolute; top: 25px;}
+
+            .aboutus-thumb-section {width: 75%;left: 4%;}
+
+            .aboutus-bg-heading{position:absolute; top:28px; left: 22px; z-index: -1;}
+
+            .aboutus-section .aboutus-content{width:100%; height: auto; margin-left: 0!important; box-shadow: none; background: none; padding: 50px 120px 0 25px;}
+
+            .aboutus-section .aboutus-content .about-text{padding: 0; margin-bottom: 20px;}
+
+            .aboutus-section .shape-3{display: none;}
+
+            .resume-section .resume-inner .experience-single {padding: 20px 30px; }
+
+            .resume-section .resume-inner .resume-single {padding: 20px 30px; }
+
+            .resume-section .resume-inner .experience-single-inner:before { display: none;}
+
+            .resume-section .resume-inner .experience-single-inner:after {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:before {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:after {display: none;}
+
+            .resume-section .experience-list.pos-relative { margin-right: 0;}
+
+            .resume-section .resume-list.pos-relative { margin-left: 0; }
+
+            .resume-section .resume-list:after{ display: none;}
+
+            .resume-section .resume-inner .resume-list:before {display: none; }
+
+            .resume-section .resume-inner .experience-list:after{display: none;}
+
+            .resume-section .resume-shape-2, .resume-shape-3{position: absolute; left: 0;}
+
+            .nav-link.b-primary{margin-right: 10px; padding: 10px 15px!important;}
+
+            .service-section .desc-text{margin-bottom: 30px;}
+
+            .service-section .shape.srv-shape-3{position: absolute; right: 0;}
+
+            .service-section .shape.srv-shape-5{position: absolute; top: 6%; left: 45%;}
+
+            .service-section .shape.srv-shape-6{position: absolute; left: 0;}
+
+            .service-section .shape.srv-shape-8{position: absolute; right: 0; top: 10%;}
+
+            .test-thumbnail{ width: 50%; height: auto; margin: 0 auto;}
+
+            .testimonial-section{padding-bottom: 0; margin-top: 25px; background: none;}
+
+            .dark-mode .testimonial-section{ background: none;}
+
+            .test-content .quote-icon i { display: none;}
+
+            .test-content.pos-relative p {font-size: 14px;text-align: center;}
+
+            .slider-item .test-content.pos-relative{width: 100%; height: auto; padding-left: 0; padding-top: 20px;}
+
+            .test-shape-section .test-shape{display: none;}
+
+            .blog-single-overly .meta-desc .blog-date:after {position: absolute; right: -55px;}
+
+            .portfolio-section .menu-section{width: 80%; height: auto; margin: 0 auto;}
+
+            .portfolio-section .portfolio-items-wrapper{width: 100%; height: auto;}
+
+            .portfolio-items .portfolio-single{width: 42%;height: auto;}
+
+            .portfolio-items .portfolio-single .portfolio-content .play-btn i {width: 45px; height: 30px;line-height: 25px;margin-bottom: 10px;}
+
+            .portfolio-items .portfolio-single .d-block.text-white{font-size: 14px;}
+
+            .portfolio-items .portfolio-content .title.text-white.pt-20{padding: 0; font-size: 16px!important;}
+
+            .education-quality {margin-top: 25px;}
+
+            .portfolio-section .shape.port-shape-3{position: absolute; top: 15%; right: 0;}
+
+            .portfolio-section .shape.port-shape-5{position: absolute; left: 80%;}
+
+            .portfolio-section .shape.port-shape-8{position: absolute; right: 80%;}
+
+            .pricing-section{margin-top: 30px;}
+
+            .pricing-section .pricing-single{border-radius: 15px; text-align: center;}
+
+            .pricing-single .theme {border-radius: 0 40px 0 40px;top: 105px;right: 30%;}
+
+            .pricing-section .pricing-shape{width: 100px;}
+
+            .pricing-section .pricing-shape.pricing-shape-1{position: absolute; left: 0; top: 8%;}
+
+            .pricing-section .pricing-shape.pricing-shape-2{position: absolute; right: 0; }
+
+            .pricing-section .pricing-shape.pricing-shape-3{position: absolute; right: 0; top: 8%;}
+
+            .pricing-section .pricing-shape.pricing-shape-4{position: absolute; left: 0;}
+
+            .contact-section .contact-sidebar { text-align: center; }
+
+            .contact-section .shape.port-shape-1{ position: absolute; top: 0; left: 0;}
+
+            .contact-section .shape.port-shape-2, .shape.port-shape-3{ position: absolute; right: 0;}
+
+            .contact-section .shape.port-shape-5{ position: absolute; left: 80%;}
+
+            .contact-section .shape.port-shape-6{ position: absolute; left: 0;}
+
+            .contact-section .shape.port-shape-8{ position: absolute; right: 45%;}
+
+            .footer-section .footer-child {text-align: center;}
+
+            .footer-section .footer-shape-1, .footer-shape-2, .footer-shape-5, .footer-shape-6{display: none;}
+
+            .darkmode span {position: absolute;top: 50px; right: -25px;}
+
+            .testimonial-section .slider .next-arrow {position: absolute; bottom: 40px; right: 50%; height: 40px; line-height: 40px;}
+
+            .testimonial-section .slider .prev-arrow {position: absolute; bottom: 40px; right: 33%; height: 40px; line-height: 40px;}
+
+        }
+
+        /*mobile layout */
+
+        @media only screen and (min-width:480px) and (max-width:575px){
+
+.main-navigation .menu-toggle {
+    right: 7%;
+    top: 6%;
+}
+
+.breadcum a, .oliva-breadcrumbs-content a {
+
+    font-size: 30px !important;
+
+}
+
+.widget h2 {
+
+    padding: 10px 0 !important;
+
+}
+
+
+
+.widget-area {
+
+    margin-top: 50px !important;
+
+}
+
+            .section-padding{padding: 60px 0!important;}
+
+            .top-spacing{padding-top: 60px!important;}
+
+            .pb-60 {padding-bottom: 30px!important;}
+
+            h1 {font-size: 25px!important; line-height: 35px!important;}
+
+            h2 {font-size: 16px!important;line-height: 26px!important;}
+
+            h2 span{font-size: 16px!important;line-height: 26px!important;}
+
+            .resume-section span.d-block { font-size: 14px;}
+
+            h4 {font-size: 20px!important; line-height: 30px!important;}
+
+            .b-primary { padding: 15px 35px!important;}
+
+            .mb-4 {margin-bottom: 1rem!important;}
+
+            .mb-5 {margin-bottom: 1rem!important;}
+
+            p.banner-text{padding-left: 0!important;}
+
+            p.desc-text{border: none; padding-left: 10%; margin-bottom: 20px;}
+
+            .dark-mode p.desc-text{border: none; padding-left: 10%;}
+
+            .section-bg-heading{padding-left: 10%;}
+
+            .sidebar-tittle.pos-relative {padding-left: 10%;}
+
+            .banner-section .banner-sub-heading.text-type { font-size: 15px;line-height: 25px;}
+
+            .main-header .main-menu{display: none;}
+
+            .header-section .header-contact { width: 100%; height: auto; text-align: center;}
+
+            .header-section .social-icon{display: none;}
+
+            .banner-section { padding-top: 220px!important;}
+
+            .banner-section .banner-content {padding:0 10%; text-align: center;}
+
+            .banner-section .thumbbail-wrap {display: none;}
+
+            .banner-counter .counter-box {margin-right: 40px;}
+
+            .banner-counter{justify-content: center!important;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .banner-section #play-btn i{margin-left: 20px; width: 40px; height: 40px; line-height: 40px;}
+
+            .banner-section .shape{display: none;}
+
+            .aboutus-thumb-section .aboutus-thumb { position: absolute; top: 22px;}
+
+            .aboutus-thumb-section {width: 80%; left: 4%;}
+
+            .aboutus-section .shape{display: none;}
+
+            .aboutus-bg-heading{position:absolute; top:28px; left: 22px; z-index: -1;}
+
+            .aboutus-section .aboutus-content{width:100%; height: auto; margin-left: 0!important; box-shadow: none; background: none; padding: 50px 0 0 25px;}
+
+            .aboutus-section .aboutus-content .about-text{padding: 0;}
+
+            .resume-section .portfolio-shape{ display: none;}
+
+            .nav-link.b-primary{margin-right: 0px; padding: 10px 15px!important;}
+
+            .resume-section .resume-inner {text-align: center;}
+
+            .resume-inner .experience-list:after{display: none;}
+
+            .resume-inner .experience-list:before{display: none;}
+
+            .resume-section .resume-inner .experience-single {padding: 20px 30px; margin-bottom: 20px;}
+
+            .resume-section .resume-inner .resume-single {padding: 20px 30px; margin-bottom: 20px;}
+
+            .resume-section .resume-inner .experience-single-inner:before { display: none;}
+
+            .resume-section .resume-inner .experience-single-inner:after {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:before {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:after {display: none;}
+
+            .resume-section .experience-list.pos-relative { margin: 0 auto; width: 80%;}
+
+            .resume-section .resume-list.pos-relative { width: 80%; margin: 0 auto;}
+
+            .resume-inner .resume-list:before{display: none;}
+
+            .resume-inner .resume-list:after{display: none;}
+
+            .resume-section .resume-shape-2{ position: absolute; left: 0; }
+
+            .resume-section .resume-shape-3{ position: absolute; bottom: -30px;}
+
+            .service-section .service-box-single{width: 80%; margin: 0 auto;}
+
+            .service-section .service-box-inner{min-height: 325px;}
+
+            .service-section .service-box-front{min-height: 325px;}
+
+            .service-section .service-box-back{min-height: 325px;}
+
+            .service-section .service-shape{display: none;}
+
+            .test-bg-heading{position: absolute; left: 125px;}
+
+            .test-thumbnail{ width: 50%; height: auto; margin: 0 auto;}
+
+            .testimonial-section{padding-bottom: 0; margin-top: 20px; background: none;}
+
+            .dark-mode .testimonial-section{ background: none;}
+
+            .test-content .quote-icon i { display: none;}
+
+            .slider-item .test-content.pos-relative{width: 100%; height: auto; padding-left: 0; padding-top: 20px;}
+
+            .test-shape-section .test-shape{display: none;}
+
+            .blog-section .blog-single{width: 80%; margin: 0 auto;}
+
+            .blog-single-overly .meta-desc .blog-date:after {position: absolute; right: -55px;}
+
+            .blog-single-overly .meta-desc .blog-date:after{display: none;}
+
+            .blog-single-overly .blog-author {padding-left: 60px;}
+
+            .portfolio-section .menu-section{width: 80%; height: auto; margin: 0 auto;}
+
+            .portfolio-section .portfolio-items-wrapper{width: 100%; height: auto;}
+
+            .portfolio-items .portfolio-single{width: 42%;height: auto;}
+
+            .portfolio-items .portfolio-single .portfolio-content .play-btn i { width: 40px;height: 25px; line-height: 22px;font-size: 14px; margin-bottom: 10px; }
+
+            .portfolio-items .portfolio-single .d-block.text-white{font-size: 14px;}
+
+            .education-quality {margin-top: 25px;}
+
+            .portfolio-items .portfolio-content .title.text-white.pt-20{padding: 0; font-size: 16px!important;}
+
+            .pricing-section.pos-relative{margin-top: 20px;}
+
+            .portfolio-section .portfolio-shape{display: none;}
+
+            .pricing-section .pricing-single{width: 80%; margin: 0 auto; border-radius: 15px; text-align: center; margin-bottom: 20px!important;}
+
+            .pricing-single .theme {border-radius: 0 40px 0 40px;top: 105px;right: 30%;}
+
+            .pricing-section .pricing-item ul li{padding-bottom: 12px;}
+
+            .pricing-section .pricing-shape{display: none;}
+
+            .contact-section .contact-sidebar { text-align: center; }
+
+            .contact-section .shape{ display: none;}
+
+            .footer-section .footer-child {text-align: center;}
+
+            .footer-section .footer-shape{display: none;}
+
+            .footer-child .footer-contact{padding-top: 0;}
+
+            .darkmode span {position: absolute;top: 60px; right: -38px;}
+
+            .testimonial-section .slider .next-arrow {position: absolute; bottom: 40px; right: 50%; height: 40px; line-height: 40px;}
+
+            .testimonial-section .slider .prev-arrow {position: absolute; bottom: 40px; right: 33%; height: 40px; line-height: 40px;}
+
+        }
+
+        @media only screen and (min-width:360px) and (max-width:479px){
+
+.widget h2 {
+
+    padding: 10px 0 !important;
+
+}
+
+ .breadcum a,  .oliva-breadcrumbs-content a {
+
+    font-size: 30px !important;
+
+}
+
+.main-navigation .menu-toggle {
+
+    right: 0;
+
+}
+
+.widget-area {
+
+    margin-top: 50px !important;
+
+}
+
+            .section-padding{padding: 50px 0!important;}
+
+            .top-spacing{padding-top: 50px!important;}
+
+            .pb-60 {padding-bottom: 20px!important;}
+
+            h1 {font-size: 25px!important; line-height: 35px!important;}
+
+            h2 {font-size: 20px!important;line-height: 30px!important;}
+
+            h2 span{font-size: 20px!important;line-height: 30px!important;}
+
+            h3{font-size: 18px; line-height: 28px;}
+
+            h4 {font-size: 20px!important; line-height: 30px!important;}
+
+            .b-primary { padding: 15px 35px!important;}
+
+            .mb-5 {margin-bottom: 1rem!important;}
+
+            .sub-heading{padding-bottom: 10px;}
+
+            p.banner-text{padding-left: 0!important;}
+
+            p.desc-text{border: none; padding-left: 10%; margin-bottom: 20px;}
+
+            .dark-mode p.desc-text{border: none; padding-left: 10%;}
+
+            .section-bg-heading{padding-left: 10%;}
+
+            .sidebar-tittle.pos-relative {padding-left: 10%;}
+
+            .banner-section .banner-sub-heading.text-type { font-size: 15px;line-height: 25px;}
+
+            .main-header .main-menu{display: none;}
+
+            .header-section .header-contact { width: 100%; height: auto;}
+
+            .header-section .social-icon{display: none;}
+
+            .banner-section { padding-top: 220px!important;}
+
+            .banner-section .banner-content {padding:0 10%; text-align: center;}
+
+            .banner-section .thumbbail-wrap {display: none;}
+
+            .banner-counter .counter-box {margin-right: 40px;}
+
+            .banner-counter{justify-content: center!important;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .banner-section #play-btn i{margin: 0; width: 40px; height: 40px; line-height: 40px;}
+
+            .banner-section .shape{display: none;}
+
+            .aboutus-thumb-section .aboutus-thumb { position: absolute; top: 16px; right: 60px;}
+
+            .aboutus-thumb-section {width: 80%; left: 4%;}
+
+            .aboutus-bg-heading{position:absolute; top:40px; left: 22px; z-index: -1; font-size: 30px;}
+
+            .aboutus-section .aboutus-content{width:100%; height: auto; margin-left: 0!important; box-shadow: none; background: none; padding: 50px 0 0 25px;}
+
+            .aboutus-section .aboutus-content .about-text{padding: 0;}
+
+            .aboutus-section .shape{display: none;}
+
+            .nav-link.b-primary{margin-right: 0px; padding: 10px 15px!important;}
+
+            .resume-section span.d-block { font-size: 14px;}
+
+            .resume-section .resume-inner {text-align: center;}
+
+            .resume-inner .experience-list:after{display: none;}
+
+            .resume-inner .experience-list:before{display: none;}
+
+            .resume-section .resume-inner .experience-single {padding: 20px 30px; margin-bottom: 20px;}
+
+            .resume-section .resume-inner .resume-single {padding: 20px 30px; margin-bottom: 20px;}
+
+            .resume-section .resume-inner .experience-single-inner:before { display: none;}
+
+            .resume-section .resume-inner .experience-single-inner:after {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:before {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:after {display: none;}
+
+            .resume-section .experience-list.pos-relative { margin: 0 auto; width: 80%;}
+
+            .resume-section .resume-list.pos-relative { width: 80%; margin: 0 auto;}
+
+            .resume-inner .resume-list:before{display: none;}
+
+            .resume-inner .resume-list:after{display: none;}
+
+            .resume-section .portfolio-shape{ display: none;}
+
+            .service-section .service-box-wraapper{width: 80%; margin: 0 auto;}
+
+            .service-section .service-box-inner{min-height: 392px;}
+
+            .service-section .service-box-front{min-height: 392px;}
+
+            .service-section .service-box-back{min-height: 392px;}
+
+            .service-section .service-shape{display: none;}
+
+            .test-bg-heading{position: absolute; left: 30px;}
+
+            .test-thumbnail{ width: 50%; height: auto; margin: 0 auto;}
+
+            .testimonial-section{padding-bottom: 0;margin-top: 10px; background: none;}
+
+            .test-content.pos-relative p {font-size: 14px;text-align: center;}
+
+            .dark-mode .testimonial-section{ background: none;}
+
+            .test-content .quote-icon i { display: none;}
+
+            .slider-item .test-content.pos-relative{width: 100%; height: auto; padding-left: 0; padding-top: 20px;}
+
+            .test-shape-section .test-shape{display: none;}
+
+            .blog-single-overly .meta-desc .blog-date:after {position: absolute; right: -55px;}
+
+            .blog-single-overly .meta-desc .blog-date:after{display: none;}
+
+            .blog-single-overly .blog-author {padding-left: 60px;}
+
+            .portfolio-section .menu-section{width: 80%; height: auto; margin: 0 auto;}
+
+            .portfolio-section .portfolio-items-wrapper{width: 100%; height: auto;}
+
+            .portfolio-items .portfolio-single{width: 44%;height: auto;}
+
+            .portfolio-items .portfolio-single .portfolio-content .play-btn i { width: 40px;height: 25px; line-height: 22px;font-size: 14px; margin-bottom: 10px; }
+
+            .portfolio-items .portfolio-single .d-block.text-white{font-size: 14px;}
+
+            .portfolio-items .portfolio-content .title.text-white.pt-20{padding: 0; font-size: 16px!important;}
+
+            .education-quality {margin-top: 25px;}
+
+            .pricing-section.pos-relative{margin-top: 20px;}
+
+            .portfolio-section .portfolio-shape{display: none;}
+
+            .pricing-section .pricing-single{width: 80%; margin: 0 auto; border-radius: 15px; text-align: center;}
+
+            .pricing-single .theme {border-radius: 0 40px 0 40px;top: 80px;right: 25%;}
+
+            .pricing-section .pricing-item ul li{padding-bottom: 12px;}
+
+            .pricing-section .pricing-shape{display: none;}
+
+            .contact-section .contact-sidebar { text-align: center; }
+
+            .contact-section .shape{ display: none;}
+
+            .footer-section .footer-child {text-align: center;}
+
+            .footer-section .footer-shape{display: none;}
+
+            .footer-child .footer-contact{padding-top: 0;}
+
+            .darkmode span {position: absolute;top: 60px; right: -38px;}
+
+            .testimonial-section .slider .next-arrow {position: absolute; bottom: 40px; right: 50%; height: 40px; line-height: 40px;}
+
+            .testimonial-section .slider .prev-arrow {position: absolute; bottom: 40px; right: 25%; height: 40px; line-height: 40px;}
+
+        }
+
+        @media only screen and (max-width:359px){
+
+.widget h2 {
+
+    padding: 10px 0 !important;
+
+}
+
+.breadcum .breadcum a, .breadcum .oliva-breadcrumbs-content a {
+
+    font-size: 30px !important;
+
+}
+
+.main-navigation .menu-toggle {
+
+    right: 0;
+
+}
+
+
+
+.widget-area {
+
+    margin-top: 50px !important;
+
+}
+
+            .pt-30{padding-top: 15px;}
+
+            .pb-15{padding-bottom: 8px;}
+
+            .pb-10{padding-bottom: 5px;}
+
+            .pb-40{padding-bottom: 20px;}
+
+            .pb-45{padding-bottom: 25px;}
+
+            .pt-20{padding-top: 10px;}
+
+            .pt-60{padding-top: 30px;}
+
+            .pb-30{padding-bottom: 15px;}
+
+            .pb-20{padding-bottom: 10px;}
+
+            .pb-60{padding-bottom: 30px;}
+
+            .pl-60{padding-left: 30px;}
+
+            .pb-80{padding-bottom: 40px;}
+
+            .pt-40{padding-top: 20px;}
+
+            .pl-40{padding-left: 20px;}
+
+            .pt-50{padding-top: 25px;}
+
+            .pl-10{padding-left: 5px;}
+
+            .section-padding{padding: 45px 0!important;}
+
+            .sub-heading{padding-bottom: 10px;}
+
+            .top-spacing{padding-top: 45px!important;}
+
+            .pb-60 {padding-bottom: 15px!important;}
+
+            h1 {font-size: 20px!important; line-height: 30px!important;}
+
+            h2 {font-size: 18px!important;line-height: 28px!important;}
+
+            h2 span{font-size: 18px!important;line-height: 28px!important;}
+
+            h3{font-size: 17px; line-height: 27px;}
+
+            h4 {font-size: 14px!important; line-height: 24px!important;}
+
+            p{font-size: 12px!important;}
+
+            span{font-size: 12px!important;}
+
+            .mb-5 {margin-bottom: 1rem!important;}
+
+            .b-primary { padding: 12px 30px!important;}
+
+            .section-bg-heading{font-size: 35px!important; top: -18px;}
+
+            p.banner-text{padding-left: 0!important;}
+
+            p.desc-text{border: none; padding-left: 10%; margin-bottom: 10px;}
+
+            .btn-theme{font-size: 12px;}
+
+            .dark-mode p.desc-text{border: none; padding-left: 10%;}
+
+            .section-bg-heading{padding-left: 10%;}
+
+            .sidebar-tittle.pos-relative {padding-left: 10%;}
+
+            .banner-section .banner-sub-heading.text-type { font-size: 15px;line-height: 25px;}
+
+            .main-header .main-menu{display: none;}
+
+            .header-section .header-contact { width: 100%; height: auto;}
+
+            .header-section .social-icon{display: none;}
+
+            .banner-section { padding-top: 220px!important;}
+
+            .banner-section .banner-content {padding:0 10%; text-align: center;}
+
+            .banner-section .thumbbail-wrap {display: none;}
+
+            .banner-counter .counter-box {margin-right: 40px;}
+
+            .banner-counter{justify-content: center!important;}
+
+            .counter-box span.counter {font-size: 20px!important;}
+
+            .banner-section:before{display: none;}
+
+            .banner-section:after{display: none;}
+
+            .banner-section #play-btn i{margin: 0; width: 40px; height: 40px; line-height: 40px;}
+
+            .banner-section .shape{display: none;}
+
+            .aboutus-thumb-section .aboutus-thumb { position: absolute; top: 13px; right: 60px;}
+
+            .aboutus-thumb-section {width: 80%; left: 4%;}
+
+            .aboutus-bg-heading{position:absolute; top:17px; left: 22px; z-index: -1; font-size: 35px!important;}
+
+            .aboutus-section .aboutus-content{width:100%; height: auto; margin-left: 0!important; box-shadow: none; background: none; padding: 0 0 0 25px;}
+
+            .aboutus-section .aboutus-content .about-text{padding: 0;}
+
+            .aboutus-section .shape{display: none;}
+
+            .nav-link.b-primary{margin-right: 0px; padding: 7px 12px!important; font-size: 12px;}
+
+            .resume-section span.d-block { font-size: 14px;}
+
+            .resume-section .resume-inner {text-align: center;}
+
+            .resume-inner .experience-list:after{display: none;}
+
+            .resume-inner .experience-list:before{display: none;}
+
+            .resume-section .resume-inner .experience-single {padding: 12px 18px; margin-bottom: 15px;}
+
+            .resume-section .resume-inner .resume-single {padding: 12px 22px; margin-bottom: 15px;}
+
+            .resume-section .resume-inner .experience-single-inner:before { display: none;}
+
+            .resume-section .resume-inner .experience-single-inner:after {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:before {display: none; }
+
+            .resume-section .resume-inner .resume-single-inner:after {display: none;}
+
+            .resume-section .experience-list.pos-relative { margin: 0 auto; width: 80%;}
+
+            .resume-section .resume-list.pos-relative { width: 80%; margin: 0 auto;}
+
+            .resume-inner .resume-list:before{display: none;}
+
+            .resume-inner .resume-list:after{display: none;}
+
+            .education-quality {margin-top: 25px;}
+
+            .resume-section .resume-shape-2{ position: absolute; left: 0; }
+
+            .resume-section .resume-shape-3{ position: absolute; bottom: -30px;}
+
+            .resume-section .shape{display: none;}
+
+            .service-section .service-box-wraapper{width: 80%; margin: 0 auto;}
+
+            .service-section .service-box-inner{min-height: 392px;}
+
+            .service-section .service-box-front{min-height: 392px;}
+
+            .service-section .service-box-back{min-height: 392px;}
+
+            .service-section .shape{display: none;}
+
+            .test-bg-heading{position: absolute; left: 50px; top: -18px; font-size: 35px!important;}
+
+            .test-thumbnail{ width: 50%; height: auto; margin: 0 auto;}
+
+            .testimonial-section{padding-bottom: 0; margin-top: 20px; background: none;}
+
+            .dark-mode .testimonial-section{ background: none;}
+
+            .test-content .quote-icon i { display: none;}
+
+            .slider-item .test-content.pos-relative{width: 100%; height: auto; padding-left: 0; padding-top: 20px;}
+
+            .test-shape-section .test-shape{display: none;}
+
+            .blog-section .blog-single{max-height: 400px;}
+
+            .blog-single-overly .meta-desc .blog-date:after {position: absolute; right: -55px;}
+
+            .blog-single-overly .meta-desc .blog-date:after{display: none;}
+
+            .blog-single-overly .blog-author {padding-left: 60px;}
+
+            .portfolio-section .menu-section{width: 80%; height: auto; margin: 0 auto;}
+
+            .portfolio-section .portfolio-items-wrapper{width: 100%; height: auto;}
+
+            .portfolio-items .portfolio-single{width: 43%;height: auto;}
+
+            .portfolio-items .portfolio-single .portfolio-content .play-btn i { width: 40px;height: 25px; line-height: 22px;font-size: 14px; margin-bottom: 10px; }
+
+            .portfolio-items .portfolio-single .d-block.text-white{font-size: 14px;}
+
+            .portfolio-items .portfolio-content .title.text-white.pt-20{padding: 0; font-size: 16px!important;}
+
+            .portfolio-section .shape{display: none;}
+
+            .pricing-section .pricing-single{border-radius: 15px; text-align: center;}
+
+            .pricing-single .theme {border-radius: 0 40px 0 40px;top: 80px;right: 25%;}
+
+            .pricing-section .pricing-single .pricing-body {padding: 20px 25px;}
+
+            .pricing-section .pricing-item ul li{padding-bottom: 12px;}
+
+            .pricing-section .pricing-shape{display: none;}
+
+            .contact-section .contact-sidebar { text-align: center; }
+
+            .contact-section .shape{ display: none;}
+
+            .footer-section .footer-child {text-align: center;}
+
+            .footer-section .footer-shape{display: none;}
+
+            .footer-child .footer-contact{padding-top: 0;}
+
+            .footer-contact ul li a{font-size: 12px;}
+
+            .darkmode span {position: absolute;top: 60px; right: -38px;}
+
+            .testimonial-section .slider .next-arrow {position: absolute; bottom: 40px; right: 50%; height: 40px; line-height: 40px;}
+
+            .testimonial-section .slider .prev-arrow {position: absolute; bottom: 40px; right: 25%; height: 40px; line-height: 40px;}
+
+        }
+
+        
+
+        

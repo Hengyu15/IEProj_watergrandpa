@@ -1,0 +1,218 @@
+/*
+ * #-Mobile Menu
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+.off_canvars_overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9;
+    cursor: crosshair;
+    background: #232323;
+    top: 0;
+  }
+  .off_canvars_overlay.active {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  .offcanvas_menu {
+    display: none;
+  }
+  .offcanvas_menu_wrapper {
+      width: 290px;
+      position: fixed;
+      background: #fff;
+      z-index: 999;
+      top: 0;
+      height: 100vh;
+      transition: .5s;
+      left: 0;
+      margin-left: -300px;
+      padding: 20px 0px 30px;
+      overflow-y: auto;
+  }
+  .offcanvas_menu_wrapper.active {
+    margin-left: 0;
+  }
+  .offcanvas_menu_wrapper .slinky-theme-default {
+    background: inherit;
+    min-height: 300px;
+    overflow-y: auto;
+  }
+  .offcanvas_menu_wrapper .header_search_box {
+    display: block;
+  }
+  .offcanvas_main_menu > li.menu-item-has-children.menu-open > span.menu-expand {
+    transform: rotate(180deg);
+  }
+  .offcanvas_main_menu > li ul li.menu-item-has-children.menu-open span.menu-expand {
+    transform: rotate(180deg);
+  }
+  .offcanvas_main_menu > li.menu-item-has-children.sub-menu.menu-open > span.menu-expand {
+    transform: rotate(180deg);
+  }
+  .offcanvas_main_menu > li ul li.menu-item-has-children.sub-menu.menu-open span.menu-expand {
+    transform: rotate(180deg);
+  }
+  .offcanvas_main_menu li {
+    position: relative;
+  }
+  .offcanvas_main_menu li:last-child {
+    margin: 0;
+  }
+ .offcanvas_main_menu li span.menu-expand {
+  position: absolute;
+  right: 10px;
+  padding: 4px 24px;
+  cursor: pointer;
+}
+.mobile-menu-area{
+  display: none;
+  width: 100%;
+
+}
+.mobile-menu-area.active{
+  display: block;
+  transition:  1s ease-out;
+}
+  .offcanvas_main_menu li a {
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: capitalize;
+      display: block;
+      padding: 0px 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ededed;
+      color: #545454;
+  }
+  .offcanvas_main_menu li a:hover {
+    color: #f9004d;
+  }
+  .offcanvas_main_menu li ul.sub-menu {
+    padding-left: 20px;
+  }
+  .offcanvas_footer {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  .offcanvas_footer span a {
+    font-size: 14px;
+  }
+  .offcanvas_footer span a:hover {
+    color: #FF4800;
+  }
+  .slinky-theme-default a:not(.back) {
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .slinky-theme-default a:not(.back):hover {
+    background: inherit;
+    color: #FF4800;
+  }
+  .canvas_close {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+  }
+  .canvas_close a {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 32px;
+    height: 32px;
+    display: block;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    color: #333;
+  }
+  .canvas_close a i{
+    color: #FF4800;
+    font-size: 30px;
+  }
+  .mobile-logo {
+      padding-left: 20px;
+      margin-bottom: 20px;
+  }
+  .canvas_open span {
+    display: block;
+    text-align: center;
+  }
+  .canvas_open  span {
+      width: 30px;
+      height: 3px;
+      background: #FE354D;
+      display: block;
+      margin: 6px 0px;
+  }
+  .canvas_open  span:nth-child(2){
+      width: 20px;
+  }
+  .canvas_open:hover {
+    color: #fe3737;
+    border-color: #fe3737;
+    cursor: pointer;
+  }
+  .canvas_open{
+    display: none;
+  }
+  .has-sub-menu{
+    display: none;
+  }
+  .has-sub-menu.active1{
+    display: block;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .offcanvas_menu {
+      display: block;
+      z-index: 9;
+    }
+  .sub-menu li a i{
+    display: none;
+  }
+  .offcanvas_main_menu .has-sub-menu{
+    padding-left: 50px;
+  }
+  .canvas_open {
+    display: block;
+  }
+  
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .offcanvas_menu {
+      display: block;
+      z-index: 9;
+    }
+    .canvas_open {
+      display: block;
+    }
+  .sub-menu li a i{
+    display: none;
+  }
+  .offcanvas_main_menu .has-sub-menu{
+    padding-left: 50px;
+  }
+  }
+  @media only screen and (max-width: 767px) {
+    .offcanvas_menu {
+      display: block;
+      z-index: 9;
+    }
+    .canvas_open {
+      display: block;
+    }
+  .sub-menu li a i{
+    display: none;
+  }
+  .offcanvas_main_menu .has-sub-menu{
+    padding-left: 50px;
+  }
+  
+  }
+  

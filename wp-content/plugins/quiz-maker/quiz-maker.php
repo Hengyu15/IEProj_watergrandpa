@@ -16,7 +16,7 @@ ob_start();
  * Plugin Name:       Quiz Maker
  * Plugin URI:        https://ays-pro.com/wordpress/quiz-maker
  * Description:       This plugin allows you make unlimited number of quizes.
- * Version:           6.3.1.8
+ * Version:           6.3.2.0
  * Author:            Quiz Maker team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -36,8 +36,8 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'AYS_QUIZ_NAME_VERSION', '6.3.1.8' );
-define( 'AYS_QUIZ_VERSION', '6.3.1.8' );
+define( 'AYS_QUIZ_NAME_VERSION', '6.3.2.0' );
+define( 'AYS_QUIZ_VERSION', '6.3.2.0' );
 define( 'AYS_QUIZ_NAME', 'quiz-maker' );
 
 if( ! defined( 'AYS_QUIZ_BASENAME' ) )

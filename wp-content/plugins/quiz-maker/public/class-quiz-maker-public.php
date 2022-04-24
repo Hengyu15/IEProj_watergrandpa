@@ -3692,7 +3692,7 @@ class Quiz_Maker_Public
         return $category;
     }
     
-    public function get_question_category_by_id($id){
+    public static function get_question_category_by_id($id){
         global $wpdb;
 
         $sql = "SELECT *
@@ -3830,7 +3830,7 @@ class Quiz_Maker_Public
                 $show_question_category = $options['showQuestionCategory'];
                 $show_question_category_description = $options['showQuestionCategoryDescription'];
                 if($show_question_category){
-                    $question_category_data = $this->get_question_category_by_id($question['category_id']);
+                    $question_category_data = self::get_question_category_by_id($question['category_id']);
                     $question_category = $question_category_data['title'];
                     $question_category_description = ( isset( $question_category_data['description'] ) && $question_category_data['description'] != "" ) ? $question_category_data['description'] : "";
                     

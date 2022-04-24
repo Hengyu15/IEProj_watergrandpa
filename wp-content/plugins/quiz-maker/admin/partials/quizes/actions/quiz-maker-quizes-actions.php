@@ -299,6 +299,12 @@ if (isset($_POST['ays_apply_top']) || isset($_POST['ays_apply'])) {
     $this->quizes_obj->add_or_edit_quizes();
 }
 
+$next_quiz_id = "";
+if ( isset( $id ) && !is_null( $id ) ) {
+    $next_quiz = $this->get_next_or_prev_row_by_id( $id, "next", "aysquiz_quizes" );
+    $next_quiz_id = (isset( $next_quiz['id'] ) && $next_quiz['id'] != "") ? absint( $next_quiz['id'] ) : null;
+}
+
 $wp_general_settings_url = admin_url( 'options-general.php' );
 
 $style = null;
@@ -6233,6 +6239,17 @@ dated
                     echo $buttons_html;
                         submit_button(__('Save and close', $this->plugin_name), 'primary ays-quiz-loader-banner', 'ays_submit', true, $other_attributes);
                         submit_button(__('Save', $this->plugin_name), 'ays-quiz-loader-banner', 'ays_apply', true, $other_attributes);
+
+                        if ( $next_quiz_id != "" && !is_null( $next_quiz_id ) ) {
+
+                            $other_attributes = array(
+                                'id'            => 'ays-quiz-next-button',
+                                'data-message'  => __( 'Are you sure you want to go to the next quiz page?', $this->plugin_name),
+                                'href'          => sprintf( '?page=%s&action=%s&quiz=%d', esc_attr( $_REQUEST['page'] ), 'edit', absint( $next_quiz_id ) )
+                            );
+                            submit_button(__('Next Quiz', $this->plugin_name), 'primary ays-quiz-loader-banner ays-quiz-next-button-class', 'ays_quiz_next_button', true, $other_attributes);
+                        }
+
                         echo $loader_iamge;
                     $buttons_html = '</div>';
                     $buttons_html .= '<div class="ays_save_default_button_box">';

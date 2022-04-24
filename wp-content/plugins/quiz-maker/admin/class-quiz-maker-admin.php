@@ -2206,7 +2206,7 @@ class Quiz_Maker_Admin
                             $content[] = '</strong>';
                             $content[] = '<br>';
                             $content[] = '<strong>';
-                                    $content[] = __( "Hurry up! Ends on March 31. <a href='https://ays-pro.com/spring-bundle' target='_blank'>Check it out!</a>", AYS_QUIZ_NAME );
+                                    $content[] = __( "Hurry up! Ending on. <a href='https://ays-pro.com/spring-bundle' target='_blank'>Check it out!</a>", AYS_QUIZ_NAME );
                             $content[] = '</strong>';
                         $content[] = '</p>';
                     $content[] = '</div>';
@@ -2442,10 +2442,14 @@ class Quiz_Maker_Admin
         $screen->set_help_sidebar($sidebar_content);
     }
 
-    public function get_next_or_prev_question_by_id( $id, $type = "next" ) {
+    public function get_next_or_prev_row_by_id( $id, $type = "next", $table = "aysquiz_questions" ) {
         global $wpdb;
 
-        $questions_table = esc_sql( $wpdb->prefix . "aysquiz_questions" );
+        if ( is_null( $table ) || empty( $table ) ) {
+            return null;
+        }
+
+        $ays_table = esc_sql( $wpdb->prefix . $table );
 
         $where = array();
         $where_condition = "";
@@ -2471,7 +2475,7 @@ class Quiz_Maker_Admin
             $where_condition = " WHERE " . implode( " AND ", $where );
         }
 
-        $sql = "SELECT `id` FROM {$questions_table} ". $where_condition ." LIMIT 1;";
+        $sql = "SELECT `id` FROM {$ays_table} ". $where_condition ." LIMIT 1;";
 
         $results = $wpdb->get_row( $sql, 'ARRAY_A' );
 

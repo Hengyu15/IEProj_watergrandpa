@@ -1811,6 +1811,30 @@
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;">[ ]</strong>
+                                <h5><?php echo __('Question categories',$this->plugin_name); ?></h5>
+                            </legend>
+                            <div class="form-group row" style="padding:0px;margin:0;">
+                                <div class="col-sm-12" style="padding:20px;">
+                                    <div class="form-group row">
+                                        <div class="col-sm-4">
+                                            <label for="ays_quiz_question_categories_title">
+                                                <?php echo __( "Shortcode", $this->plugin_name ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Quiz Question Category ID in the shortcode. It will show the category title. If there is no quiz question category available/unavailable with that particular Quiz Question Category ID, the shortcode will stay empty.',$this->plugin_name); ?>">
+                                                    <i class="ays_fa ays_fa_info_circle"></i>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="ays_quiz_question_categories_title" class="ays-text-input" onclick="this.setSelectionRange(0, this.value.length)" readonly="" value='[ays_quiz_question_categories_title id="Your_Quiz_Question_Category_ID"]'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset> <!-- Question categories -->
+                        <hr/>
+                        <fieldset>
+                            <legend>
+                                <strong style="font-size:30px;">[ ]</strong>
                                 <h5><?php echo __('Most popular quiz',$this->plugin_name); ?></h5>
                             </legend>
                             <div class="form-group row" style="padding:0px;margin:0;">

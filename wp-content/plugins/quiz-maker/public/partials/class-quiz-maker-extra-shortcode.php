@@ -76,6 +76,7 @@ class Ays_Quiz_Maker_Extra_Shortcodes_Public
         add_shortcode('ays_quiz_questions_count', array($this, 'ays_generate_questions_count_method'));
         add_shortcode('ays_quiz_category_title', array($this, 'ays_generate_category_title_method'));
         add_shortcode('ays_quiz_category_description', array($this, 'ays_generate_category_description_method'));
+        add_shortcode('ays_quiz_question_categories_title', array($this, 'ays_generate_question_categories_title_method'));
     }
 
     /*
@@ -1205,7 +1206,6 @@ class Ays_Quiz_Maker_Extra_Shortcodes_Public
             $content_html = "";
             return $content_html;
         }
-        // var_dump($results);
 
         $category_description = (isset($results['description']) && $results['description'] != '') ? Quiz_Maker_Public::ays_autoembed($results['description']) : "";
 
@@ -1226,6 +1226,63 @@ class Ays_Quiz_Maker_Extra_Shortcodes_Public
     /*
     ==========================================
         Show quiz category description | End
+    ==========================================
+    */
+
+    /*
+    ==========================================
+        Show quiz question category title | Start
+    ==========================================
+    */
+
+    public function ays_generate_question_categories_title_method( $attr ) {
+
+        $id = (isset($attr['id']) && $attr['id'] != '') ? absint( sanitize_text_field($attr['id']) ) : null;
+
+        if (is_null($id) || $id == 0 ) {
+            $quiz_question_category_title = "";
+            return str_replace(array("\r\n", "\n", "\r"), "\n", $quiz_question_category_title);
+        }
+
+        $unique_id = uniqid();
+        $this->unique_id = $unique_id;
+        $this->unique_id_in_class = $unique_id;
+
+        $quiz_question_category_title = $this->ays_generate_question_categories_title_html( $id );
+
+        return str_replace(array("\r\n", "\n", "\r"), "\n", $quiz_question_category_title);
+    }
+
+    public function ays_generate_question_categories_title_html( $id ) {
+
+        $results = Quiz_Maker_Public::get_question_category_by_id($id);
+
+        $content_html = array();
+        
+        if( is_null( $results ) || empty( $results ) ){
+            $content_html = "";
+            return $content_html;
+        }
+
+        $question_category_title = (isset($results['title']) && $results['title'] != '') ? sanitize_text_field($results['title']) : "";
+
+        if ( $question_category_title == "" ) {
+            $content_html = "";
+            return $content_html;
+        }
+
+        $content_html[] = "<span class='". $this->html_name_prefix ."question-category-title' id='". $this->html_name_prefix ."question-category-title-". $this->unique_id_in_class ."' data-id='". $this->unique_id ."'>";
+            $content_html[] = $question_category_title;
+        $content_html[] = "</span>";
+
+        $content_html = implode( '' , $content_html);
+
+        return $content_html;
+    }
+
+    /*
+    ==========================================
+        Show quiz question category title | End
     ==========================================
     */
 }

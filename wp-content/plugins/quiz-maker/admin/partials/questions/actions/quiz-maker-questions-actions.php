@@ -113,10 +113,10 @@ if(isset($_POST['ays_save_new_top']) || isset($_POST['ays_save_new'])){
 $nex_question_id = "";
 $prev_question_id = "";
 if ( isset( $id ) && !is_null( $id ) ) {
-    $nex_question = $this->get_next_or_prev_question_by_id( $id, "next" );
+    $nex_question = $this->get_next_or_prev_row_by_id( $id, "next", "aysquiz_questions" );
     $nex_question_id = (isset( $nex_question['id'] ) && $nex_question['id'] != "") ? absint( $nex_question['id'] ) : null;
 
-    $prev_question = $this->get_next_or_prev_question_by_id( $id, "prev" );
+    $prev_question = $this->get_next_or_prev_row_by_id( $id, "prev", "aysquiz_questions" );
     $prev_question_id = (isset( $prev_question['id'] ) && $prev_question['id'] != "") ? absint( $prev_question['id'] ) : null;
 }
 

@@ -3,8 +3,8 @@ Contributors: ays-pro
 Donate link: https://ays-pro.com/wordpress/quiz-maker
 Tags:  quiz maker, exam, quiz, test, questionnaire
 Requires at least: 4.0
-Tested up to: 5.9.2
-Stable tag: 6.3.1.8
+Tested up to: 5.9.3
+Stable tag: 6.3.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -222,7 +222,7 @@ The privacy policy can be found at this URL https://ipinfo.io/privacy-policy
 * [Leaderboards](https://quiz-plugin.com/leaderboard/)
 
 
-It's your chance to add unlimited quizzes, exams, tests with beautiful Quiz Maker plugin.
+It's your chance to add unlimited quizzes, exams, tests with the best quiz plugin for WordPress.
 Don't forget, in case of any problems, questions or suggestions feel free to contact us via [FREE SUPPORT FORUM](https://wordpress.org/support/plugin/quiz-maker/).
 
 
@@ -243,25 +243,27 @@ Don't forget, in case of any problems, questions or suggestions feel free to con
 == Installation ==
 
 
-There are two ways to install Quiz maker: the easy way, when you install Quiz maker from your WordPress dashboard, and the not so easy way, when you install it from WordPress.org.
+Don’t worry about the installation of your favorite quiz plugin for WordPress, as we’re here to help you! With this easy guide, you will quickly learn how to get the wp quiz plugin and enjoy its amazing features to create interactive and engaging content for your website.
 
-* 1.1 The easiest way to enjoy Quiz Maker:
-* 1.1.1 Login to your WordPress dashboard
-* 1.1.2 Go to Plugins
-* 1.1.3 Add New
-* 1.1.4 Search for Quiz maker
-* 1.1.5 Click to install
-* 1.2 The second way:
-* 1.2.1Download the zip file from https://wordpress.org/plugins/quiz-maker/
-* 1.2.2 Go to Plugins
-* 1.2.3 Add New
-* 1.2.4 Upload plugin
-* 1.2.5 Choose file quiz-maker.zip
-* 1.2.6 Click to install
+There are two ways to install the Quiz maker plugin: the first way is when you are installing it from your WordPress dashboard. The second way of installing this free WordPress quiz plugin is doing it from [wordpress.org](https://wordpress.org/).
 
-* 1.3 In order to install the Quiz maker from Wordpress.org you must unzip the archive and copy the quiz-maker folder into your plugins folder (\wp-content\plugins).
-After one ofthis steps you can activate the plugin from the Plugins menu.
-Once activated configure any options as desired and you can enjoy our Quiz maker.
+Let’s look at the first and easiest way to enjoy Quiz Maker:
+
+*   Log in to your WP dashboard.
+*   Go to the **Plugins** section on the left menu bar.
+*   Click on the **Add New** button at the top of the page.
+*   Search for the Quiz Maker.
+*   Click on the **Install now** button.
+
+That’s it. Simple and easy installation of the quiz plugin WordPress. The second way of the WordPress quiz plugin installation is the following:
+
+*   Download the zip file from [https://wordpress.org/plugins/quiz-maker/](https://wordpress.org/plugins/quiz-maker/) (Click on the **Download** button).
+*   When you have downloaded the zip file go to the **Plugins** section of your Dashboard.
+*   Afterward, click on the **Add New** and then **Upload** plugin buttons.
+*   Click on the **Choose file** and choose quiz-maker.zip file (You can also simply drag the zip file into the Upload section).
+*   Click on the **Install** button.
+
+Here it is. Once activated [configure any options](https://ays-pro.com/wordpress-quiz-maker-user-manual) as desired and you can enjoy our best WordPress quiz plugin. Build your best WP quiz within a few minutes․
 
 
 == Frequently Asked Questions ==
@@ -369,10 +371,17 @@ Want to make money with the **trivia quiz** you have created just now? We will m
 
 = How to add Mathematical equations into questions? =
 
-Do you wonder how to create a Math Quiz with hard mathematical equations in WordPress? It is easier than you think. The Quiz Maker plugin itself does not have the functionality for adding **math equations** into questions. For adding math equations into the **Quiz Maker plugin** you can make use of several math equation plugins such as [MathJax - LaTex plugin](https://wordpress.org/plugins/mathjax-latex/). For adding the math equations just install and activate the mentioned plugin. It is one of the easiest math plugins. With the help of it, you can add as many equations as you need, even if they include several symbols. In this [demo](https://www.mathjax.org/#demo), you can see a step-by-step tutorial on how to use MathJax. You have to be careful to use less-than signs, ampersands, and other HTML special characters within your math equations.
+Do you wonder how to create a Math Quiz with hard mathematical equations in WordPress? It is easier than you think. The Quiz Maker plugin itself does not have the functionality for adding **math equations** into questions. For adding math equations into the **Quiz and Survey Maker plugin** you can make use of several math equation plugins such as [MathJax - LaTex plugin](https://wordpress.org/plugins/mathjax-latex/). For adding the math equations just install and activate the mentioned plugin. It is one of the easiest math plugins. With the help of it, you can add as many equations as you need, even if they include several symbols. In this [demo](https://www.mathjax.org/#demo), you can see a step-by-step tutorial on how to use MathJax. You have to be careful to use less-than signs, ampersands, and other HTML special characters within your math equations.
 For example, to add a squared symbol, you need to write down the following sign ^2. (do not forget to insert $ character to mark the beginning and ending).
 
 == Changelog ==
+
+= 6.3.2.0 =
+* Added: Show quiz question category title shortcode on the general settings
+* Tested: Compatible up to 5.9.3
+
+= 6.3.1.9 =
+* Added: Next Quiz button on the Quizzes Edit page
 
 = 6.3.1.8 =
 * Added: Czech language support

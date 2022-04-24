@@ -3312,7 +3312,7 @@
             }
         });
 
-        $(document).on('click', '#ays-question-next-button, #ays-question-prev-button', function(e){
+        $(document).on('click', '#ays-question-next-button, #ays-question-prev-button, .ays-quiz-next-button-class', function(e){
             e.preventDefault();
             var message = $(this).data('message');
             var confirm = window.confirm( message );

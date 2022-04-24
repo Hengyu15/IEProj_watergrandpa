@@ -1,0 +1,453 @@
+.tp-flipbox{
+    width: 100%;
+    min-height: 250px;
+    height: 100%;
+}
+.tp-flipbox__holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+}
+.tp-flipbox__front,
+.tp-flipbox__back {
+    height: 100%;
+    width : 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-display: flex;
+    -ms-flex-align: center;
+    -moz-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+.tp-flipbox__content{
+    display: flex;
+    -webkit-display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.tp-flipbox__title-front,
+.tp-flipbox__title-back{
+    padding: 20px;
+    text-align: center;
+}
+
+.tp-flipbox__icon-front,
+.tp-flipbox__icon-back{
+    padding: 20px;
+    text-align: center;
+}
+.tp-flipbox__icon-front img,
+.tp-flipbox__icon-back img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tp-flipbox__desc-front,
+.tp-flipbox__desc-back{
+    padding: 0 20px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.tp-flipbox__action{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*button*/
+.tp-flipbox__btn{
+    padding: 12px 18px;
+    display: inline-block;
+    font-weight: bold;
+    font-size:10px;
+    transition: color .1s ease-in-out,background .1s ease-in-out,border .1s ease-in-out;
+    -webkit-transition: color .1s ease-in-out,background .1s ease-in-out,border .1s ease-in-out;
+}
+
+
+/*
+===================================================
+
+                FlipBox Effect
+
+===================================================
+*/
+.tp-flipbox.flip-box-style{
+    -webkit-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -ms-transform: perspective(1000px);
+    -ms-transform-style: preserve-3d;
+}
+.flip-box-style .tp-flipbox__holder{
+    -webkit-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -moz-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.flip-box-style .tp-flipbox__front,
+.flip-box-style .tp-flipbox__back {
+    -webkit-transition: all .5s cubic-bezier(.645,.045,.355,1) 0.1s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+    -moz-transition: all .5s cubic-bezier(.645,.045,.355,1);
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+    -ms-transition: all .5s cubic-bezier(.645,.045,.355,1);
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+    transition: all .5s cubic-bezier(.645,.045,.355,1) 0.1s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+.flip-box-style .tp-flipbox__front {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+}
+.flip-box-style .tp-flipbox__back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+/*
+....................................................
+                Horzintal
+....................................................
+*/
+.flip-box-style.tp-flipbox--horizontal:hover .tp-flipbox__holder{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flip-box-style.tp-flipbox--horizontal.hover .tp-flipbox__holder{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+/* START: Accommodating for IE */
+.ie .flip-box-style.tp-flipbox--horizontal:hover .tp-flipbox__back,
+.ie .flip-box-style.tp-flipbox--horizontal.hover .tp-flipbox__back {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.ie .flip-box-style.tp-flipbox--horizontal:hover .tp-flipbox__front,
+.ie .flip-box-style.tp-flipbox--horizontal.hover .tp-flipbox__front {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.ie .flip-box-style.tp-flipbox--horizontal:hover .tp-flipbox__holder{
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+/* END: Accommodating for IE */
+
+/*
+....................................................
+                VERTICAL
+....................................................
+*/
+.flip-box-style.tp-flipbox--vertical .tp-flipbox {
+    position: relative;
+}
+.flip-box-style.tp-flipbox--vertical .tp-flipbox__back {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.flip-box-style.tp-flipbox--vertical .tp-flipbox__holder {
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+}
+.flip-box-style.tp-flipbox--vertical:hover .tp-flipbox__holder {
+    -webkit-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.flip-box-style.tp-flipbox--vertical.hover .tp-flipbox__holder {
+    -webkit-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+/* START: Accommodating for IE */
+.ie .flip-box-style.tp-flipbox--vertical:hover .tp-flipbox__back,
+.ie .flip-box-style.tp-flipbox--vertical.hover .tp-flipbox__back {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.ie .flip-box-style.tp-flipbox--vertical:hover .tp-flipbox__front,
+.ie .flip-box-style.tp-flipbox--vertical.hover .tp-flipbox__front {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.ie .flip-box-style.tp-flipbox--vertical:hover .tp-flipbox__holder {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+/* END: Accommodating for IE */
+
+/*
+===================================================
+
+                Fade Effect
+
+===================================================
+*/
+.tp-flipbox.rotate-box-style {
+    overflow: hidden;
+}
+.tp-flipbox.rotate-box-style .tp-flipbox__front{
+    -webkit-transition: -webkit-transform 0.9s ease-in-out;
+    transition: -webkit-transform 0.9s ease-in-out;
+    -o-transition: transform 0.9s ease-in-out;
+    transition: transform 0.9s ease-in-out;
+    transition: transform 0.9s ease-in-out, -webkit-transform 0.9s ease-in-out;
+}
+.tp-flipbox.rotate-box-style:hover .tp-flipbox__front {
+    -webkit-transform: scale(3) rotate(30deg);
+        -ms-transform: scale(3) rotate(30deg);
+            transform: scale(3) rotate(30deg);
+}
+.tp-flipbox.rotate-box-style .tp-flipbox__back{
+    -webkit-transform: scale(1.5) rotate(30deg);
+        -ms-transform: scale(1.5) rotate(30deg);
+            transform: scale(1.5) rotate(30deg);
+    -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    transition: opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    opacity: 0;
+}
+.tp-flipbox.rotate-box-style:hover .tp-flipbox__back{
+    -webkit-transform: scale(1)rotate(0deg);
+        -ms-transform: scale(1)rotate(0deg);
+            transform: scale(1)rotate(0deg);
+    opacity: 1;
+}
+
+
+
+/*
+===================================================
+
+                Zoom in Effect
+
+===================================================
+*/
+.tp-flipbox.zoomin-box-style {
+    overflow: hidden;
+}
+.tp-flipbox.zoomin-box-style .tp-flipbox__front{
+    z-index: 3;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.zoomin-box-style .tp-flipbox__back{
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    transition: opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    opacity: 0;
+    z-index:1;
+}
+.tp-flipbox.zoomin-box-style:hover .tp-flipbox__front {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    z-index:1;
+}
+.tp-flipbox.zoomin-box-style:hover .tp-flipbox__back{
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+
+
+/*
+===================================================
+
+                Zoom Out Effect
+
+===================================================
+*/
+.tp-flipbox.zoomout-box-style {
+    overflow: hidden;
+}
+.tp-flipbox.zoomout-box-style .tp-flipbox__front{
+    z-index: 3;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.zoomout-box-style .tp-flipbox__back{
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    transition: opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    opacity: 0;
+    z-index:1;
+}
+.tp-flipbox.zoomout-box-style:hover .tp-flipbox__front {
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
+    z-index:1;
+}
+.tp-flipbox.zoomout-box-style:hover .tp-flipbox__back{
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+/*
+===================================================
+
+                Side Right Effect
+
+===================================================
+*/
+.tp-flipbox.side-right-style {
+    overflow: hidden;
+}
+.tp-flipbox.side-right-style .tp-flipbox__back {
+    transform: translateX(-120%);
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.side-right-style .tp-flipbox__front{
+    z-index: 3;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.side-right-style:hover .tp-flipbox__back{
+    transform: translateX(0) scale(1);
+}
+.tp-flipbox.side-right-style:hover .tp-flipbox__front{
+    transform: translateX(100%);
+}
+
+/*
+===================================================
+
+                Side Left Effect
+
+===================================================
+*/
+.tp-flipbox.side-left-style {
+    overflow: hidden;
+}
+.tp-flipbox.side-left-style .tp-flipbox__back {
+    transform: translateX(120%);
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.side-left-style .tp-flipbox__front{
+    z-index: 3;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.side-left-style:hover .tp-flipbox__back{
+    transform: translateX(0);
+}
+.tp-flipbox.side-left-style:hover .tp-flipbox__front{
+    transform: translateX(-100%);
+}
+/*
+===================================================
+
+                To Top Effect
+
+===================================================
+*/
+.tp-flipbox.to-top-style {
+    overflow: hidden;
+}
+.tp-flipbox.to-top-style .tp-flipbox__back {
+    transform: translateY(120%);
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.to-top-style .tp-flipbox__front{
+    z-index: 3;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.to-top-style:hover .tp-flipbox__back{
+    transform: translateY(0);
+}
+.tp-flipbox.to-top-style:hover .tp-flipbox__front{
+    transform: translateY(-100%);
+}
+/*
+===================================================
+
+                To Bottom Effect
+
+===================================================
+*/
+.tp-flipbox.to-bottom-style {
+    overflow: hidden;
+}
+.tp-flipbox.to-bottom-style .tp-flipbox__back {
+    transform: translateY(-120%);
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.to-bottom-style .tp-flipbox__front{
+    z-index: 3;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+.tp-flipbox.to-bottom-style:hover .tp-flipbox__back{
+    transform: translateY(0);
+}
+.tp-flipbox.to-bottom-style:hover .tp-flipbox__front{
+    transform: translateY(100%);
+}

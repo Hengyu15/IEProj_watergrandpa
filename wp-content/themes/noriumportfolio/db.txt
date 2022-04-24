@@ -1,0 +1,1 @@
+#wp_config_error#
