@@ -178,7 +178,7 @@ function Findpair(divid,output,config){
           }
         }
         //判断游戏进程
-        if(_this.success==total){
+        if(_this.success==8){
           var day = new Date();
           _this.times2 = day.getTime();
           overtime = _this.times2 - _this.times1;

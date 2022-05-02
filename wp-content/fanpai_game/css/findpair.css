@@ -19,9 +19,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,code,pre,form,fieldset,legend,input
 .fbox_btn {position:fixed;   width:160px;}
 .fbox_btn1 {left:0px;}
 .fbox_btn2 {bottom:120px;right:100px;}
-.fbox_btn3 {top:5px;left:270px;}
+.fbox_btn3 {top:-20px;left:170px;}
 .fbox_btn4 {top:30px;right:150px;margin-right: auto;}
 .fbox_btn5 {bottom:320px;right:440px;}
+.fbox_btn6 {left: 0;}
 .fbox_btn div {padding-bottom:10px;}
 .fbox_btn button {width:130%; height:60px; font-size:14px; outline:none; border-radius:5px; box-sizing:border-box; cursor:pointer; border:3px solid transparent; background-color:transparent; color:#fff;}
 .fbox_btn button:hover {background-color:transparent; color:transparent;}
