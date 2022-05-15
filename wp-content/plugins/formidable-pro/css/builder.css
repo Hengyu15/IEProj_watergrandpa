@@ -1,0 +1,10 @@
+.frm_auto_grow_option {
+	padding-top: 20px;
+}
+.frm-fields p.frm_auto_grow_option > label {
+	display: inline;
+}
+/* Force "Rows" to be frm2 instead of the default frm6 to make space for the Auto Grow settign in Pro. */
+.frm-single-settings.frm-type-textarea > .frm_grid_container > p:nth-of-type(4) {
+	grid-column: span 2/span 2;
+}

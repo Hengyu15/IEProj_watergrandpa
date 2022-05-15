@@ -1,0 +1,18 @@
+#general-style .frm_image_preview_wrapper .frm_image_styling_frame {
+	margin-left: 0;
+}
+#general-style .frm_image_preview_wrapper {
+	margin: 5px 0 10px;
+}
+.frm_grid_container .wp-picker-container {
+	width: 100%;
+	max-width: 130px;
+}
+.frm_grid_container .wp-picker-container button.wp-color-result {
+	border: 1px solid #ccc !important;
+}
+.wp-picker-container .wp-picker-input-wrap input.hex.wp-color-picker {
+	max-width: 100%;
+	position: relative;
+	right: 5px;
+}

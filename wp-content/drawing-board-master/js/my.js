@@ -1,0 +1,659 @@
+var $container = document.querySelector(".container")
+var $menuBox = document.querySelector(".menuBox")
+var $canvas = document.querySelector("#canvas")
+var $sizeRange = document.getElementById("size-range")
+var $opRange = document.getElementById("op-range")
+var $mask = document.querySelector(".mask")
+var $btn = document.querySelector("button.btn")
+var $cutBox = document.querySelector(".select-cut-box")
+var $input = document.getElementById("danmu-input")
+var $rotateBtn = document.querySelector(".rotate-btn")
+
+var isDown = false                  // 标志鼠标是否按下      绘图三步和剪切三步走时，后面两个事件触发的标志
+var lookModal = false               // 鼠标模式             按钮第一个功能，此模式不能绘画，只能看
+var ctx = null                      // 画笔  
+var ctx2 = null                     // 2号画笔
+var points = []                     // 滑动时收集的点       绘画三步走时，为了时画的线光滑，记录点，减短画线的距离
+var beginPoint = null               // 开始的点            绘画三步走时使用
+var currentMenu = "icon-pen"        // 初始按钮            底部按钮选中的按钮
+var currentColor = 0                // 初始颜色的index     颜色选择，默认第一个
+var paintingModal = "pen"           // 画笔模式   line||pen||cut
+var cuted = false                   // 标记裁剪时，是否已经裁剪       裁剪后，防止后续的操作再次触发裁剪操作 
+var animationTimer = null           // 弹幕动画的timer               动画的timer
+var barrageArray = []               // 保存弹幕的数组
+var globalPoint = { x : 0, y : 0 }  // canvas上鼠标的点        ---弹幕时使用
+var barrageData = [                 // 弹幕假数据
+    //"宝贝儿你回家吃饭吗",
+    "RNM退钱",
+    "Do you wanna build a snowman",
+    "二狗今天早睡了吗？",
+    "我能受这委屈吗我刚学的擒拿术",
+    "中国人不骗中国人",
+    "干净又卫生啊兄弟们",
+    "你们不要再打啦",
+    "这不得瘦死"
+]
+
+// 实现撤销和重做的功能
+let canvasHistory = []                    // canvas数据，在每次画线和橡皮檫使用后保存数据
+let step = 0                              // 画笔抬起的步数，清空时，步数也清空
+
+var penAttibutes = {                       // 画笔数据，
+    width : 2,
+    lineCap : "round",
+    lineJoin : "round",
+    strokeStyle: "#000",
+    fillStyle: "#000",
+    globalCompositeOperation: "source-over",
+    globalAlpha : 1
+}
+
+var colorLsit = [
+    "#000",
+    "#FF3333",
+    "#99CC00",
+    "#0066FF",
+    "#FFFF33",
+    "#33CC66"
+]
+
+// 单个弹幕类
+function Barrage( text, canvas ){
+    this.x = canvas.width
+    this.y = canvas.height / 2 * Math.random()
+    this.speed = Math.random() * 4 + 2
+
+    this.opacity = 0.8
+    this.text = text
+    this.color = "red"
+    this.fontSize = 28
+    this.width = 0
+    this.isStop = false
+}
+Barrage.prototype.draw = function( ctx ){
+    var text = this.text
+    ctx.save()                                  // 把画笔信息压入栈，canvas绘图三步，为了不污染上面和下面的画笔数据
+    ctx.strokeStyle = this.color
+    ctx.textBaseline = "top"                   // 设置文本基线，默认是bottom，，
+    ctx.font = `bold  ${this.fontSize}px "microsoft yahei", sans-serif`
+    ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+    ctx.beginPath()                             // 绘图三步走，第二步，重新开启一条路径信息
+    ctx.fillText( text, this.x, this.y )
+    ctx.strokeText(text, this.x, this.y)
+    this.width = ctx.measureText( text ).width
+    ctx.rect( this.x, this.y, this.width, this.fontSize + 2 )           // 因为后面isPointPath不能针对文字和画出的图形，只能针对路径，而且是当前路径
+    this.isStop = ctx.isPointInPath( globalPoint.x, globalPoint.y ) || ctx.isPointInStroke( globalPoint.x, globalPoint.y )
+    ctx.restore()                                // 绘图三步走 释放当前画笔信息，下次使用的画笔是本次前的画笔信息，相当于初始化时的画笔
+}                                                // 为什么要有画图三步走，好习惯，有用有放，下次用的时候信息不混乱
+
+
+window.onload = function(){
+    canvasSetSize()      // 设置canvas的尺寸
+    saveToHistory()      // 保存初始页面
+    window.onblur = function(){
+        document.title = "You are not done yet! !"
+    }
+    window.onfocus = function(){
+        //document.title = "快到碗里来！！"
+        document.title = "Have a great day！"
+    }
+}
+// 设置canvas适应页面
+function canvasSetSize(){
+    ctx = $canvas.getContext("2d")
+    let w = document.documentElement.clientWidth
+    let h = document.documentElement.clientHeight
+    $canvas.width = w
+    $canvas.height = h
+}
+// 屏幕下方所有功能按钮
+$container.addEventListener( "click", ( e ) => {
+    switch ( e.target.dataset.fun ){
+        case "save":
+            funSave()
+            break
+        case "shubiao":
+            funShubiao()
+            break
+        case "pen":
+            funPen()
+            break
+        case "line":
+            funLine()
+            break
+        case "eraser":
+            funEraser()
+            break
+        case "closeMenu":
+            closePenMenu()
+            break
+        case "del":
+            funDel()
+            break
+        case "text":
+            funText()
+            break
+        case "cut":
+            funCut()
+            break
+        case "dan":
+            funDan()
+            break
+        case "undo":
+            funUndo()
+            break
+        case "redo":
+            funRedo()
+            break
+    }
+    if( e.target.dataset.color ){
+        selectColor( e.target )
+    }
+} , false)
+
+// 绘图三步走
+// $canvas.addEventListener('mousedown', down, false);
+// $canvas.addEventListener('mousemove', move, false);
+// $canvas.addEventListener('mouseup', up, false);
+// $canvas.addEventListener('mouseout', up, false);
+
+if( $canvas.ontouchstart !== undefined ){
+    $canvas.ontouchstart = down
+    $canvas.ontouchmove = move
+    $canvas.ontouchend = up
+} else {
+    $canvas.onmousedown = down
+    $canvas.onmousemove = move
+    $canvas.onmouseup = up
+    $canvas.onmouseout = up
+}
+
+function down( ev ){
+    if( lookModal )return 
+    if( paintingModal === "cut" ) return
+    ev = ev.touches ? ev.touches[0] : ev
+    isDown = true;
+    var { x, y } = getPos(ev);
+    points.push({x, y});
+    beginPoint = {x, y};
+    ctx.save()
+}
+
+function move( ev ) {
+    ev = ev.touches ? ev.touches[0] : ev
+    const { x, y } = getPos(ev)
+    globalPoint.x = x
+    globalPoint.y = y
+    if (!isDown) return;
+    if( paintingModal === "cut" ) return
+    points.push({x, y});
+    if( paintingModal === "line" ){
+        drawLine1( beginPoint, { x, y } )
+    } else {
+        if (points.length > 3) {
+            const lastTwoPoints = points.slice(-2);
+            const controlPoint = lastTwoPoints[0];
+            const endPoint = {
+                x: (lastTwoPoints[0].x + lastTwoPoints[1].x) / 2,
+                y: (lastTwoPoints[0].y + lastTwoPoints[1].y) / 2,
+            }
+            drawLine(beginPoint, controlPoint, endPoint);
+            beginPoint = endPoint;
+        }
+    }
+}
+
+
+
+function up(ev) {
+    if (!isDown) return;
+    if( paintingModal === "cut" ) return
+    // 移动端抬起没有坐标
+    // console.log( ev )
+    // ev = ev.touches ? ev.touches[0] : ev
+    var { x, y } = points[ points.length - 1 ];
+    points.push({x, y});
+    if( paintingModal === "line" ){
+        drawLine1( beginPoint, { x, y } )
+    } else {
+        if (points.length > 3) {
+            const lastTwoPoints = points.slice(-2);
+            const controlPoint = lastTwoPoints[0];
+            const endPoint = lastTwoPoints[1];
+            drawLine(beginPoint, controlPoint, endPoint);
+        }
+    }
+    ctx.restore()
+    saveToHistory()
+    beginPoint = null;
+    isDown = false;
+    points = [];
+}
+
+// 直线
+function drawLine1( beginPoint, endPoint ) {
+    ctx.putImageData( canvasHistory[ step - 1 ], 0, 0 )
+    ctx.lineWidth = penAttibutes.width
+    ctx.lineCap = penAttibutes.lineCap
+    ctx.strokeStyle = penAttibutes.strokeStyle
+    ctx.fillStyle = penAttibutes.fillStyle
+    ctx.globalCompositeOperation = penAttibutes.globalCompositeOperation
+    ctx.globalAlpha = penAttibutes.globalAlpha
+    ctx.beginPath()
+    ctx.moveTo(beginPoint.x, beginPoint.y)
+    ctx.lineTo( endPoint.x, endPoint.y )
+    ctx.stroke()
+}
+
+// 绘画
+function drawLine(beginPoint, controlPoint, endPoint) {
+    ctx.lineWidth = penAttibutes.width
+    ctx.lineCap = penAttibutes.lineCap
+    ctx.lineJoin = penAttibutes.lineJoin
+    ctx.strokeStyle = penAttibutes.strokeStyle
+    ctx.fillStyle = penAttibutes.fillStyle
+    ctx.globalCompositeOperation = penAttibutes.globalCompositeOperation
+    ctx.globalAlpha = penAttibutes.globalAlpha
+    ctx.beginPath()
+    ctx.moveTo(beginPoint.x, beginPoint.y)
+    ctx.quadraticCurveTo(controlPoint.x, controlPoint.y, endPoint.x, endPoint.y)
+    ctx.stroke()
+}
+// 获取点
+function getPos( ev ) {
+    return {
+        x: ev.clientX,
+        y: ev.clientY
+    }
+}
+
+// 点击保存
+function funSave(){
+    $mask.style.display = "block"
+    document.querySelector(".r-drawer-box").style.display = "block"
+    $rotateBtn.style.display = "none"
+    var imgUrl = $canvas.toDataURL("image/png")
+    var imgEl = document.getElementsByClassName("displayImg")[0]
+    imgEl.src = imgUrl
+}
+// 鼠标
+function funShubiao(){
+    paintingModal = "pen"
+    closePenMenu()
+    classToggle( "icon-shubiao" )
+    lookModalToggle( true )
+}
+// 鼠标功能选择
+function lookModalToggle( islook ){
+    if( islook ){
+        $canvas.style.cursor = "default"
+        lookModal = true
+    } else {
+        lookModal = false
+        $canvas.style.cursor = ""
+    }
+}
+// 点击笔
+function funPen(){
+    paintingModal = "pen"
+    lookModalToggle( false )
+    $menuBox.classList.toggle("hide")
+    if( currentMenu === "icon-pen" ){
+        // 关闭功能窗
+    } else {
+        // 换上action，显示功能窗
+        classToggle( "icon-pen" )
+    }
+    penAttibutes.globalCompositeOperation = "source-over"
+}
+// 画线函数
+function funLine(){
+    paintingModal = "line"
+    lookModalToggle( false )
+    closePenMenu()
+    classToggle( "icon-line1" )
+    penAttibutes.globalCompositeOperation = "source-over"
+}
+// 橡皮檫
+function funEraser(){
+    paintingModal = "pen"
+    lookModalToggle( false )
+    closePenMenu()
+    classToggle( "icon-eraser" )
+    penAttibutes.globalCompositeOperation = "destination-out"
+}
+// 清空画布
+function funDel(){
+    // ctx.clearRect( 0, 0, $canvas.width, $canvas.height )
+    // saveToHistory()
+    ctx.putImageData( canvasHistory[0], 0, 0 )
+    step = 1
+    canvasHistory.length = step
+}
+// 文字
+function funText(){
+    
+}
+// 截图
+function funCut(){
+    lookModalToggle( true )
+    classToggle( "icon-caijian" )
+    closePenMenu()
+    paintingModal = "cut"
+}
+// 发送弹幕
+function funDan(){
+    document.querySelector(".danmu-box").style.display = "block"
+    $container.style.display = "none"
+    closePenMenu()
+    lookModalToggle( true )
+    barrageData.forEach( item => {
+        var aBraage = new Barrage( item, $canvas )
+        barrageArray.push( aBraage )
+    })
+    var drawAll = function(){
+        barrageArray = barrageArray.filter( item => {
+            if( item.x < -( item.width ) ){ 
+                return false 
+            } else {
+                if( item.isStop ){
+
+                } else {
+                    item.x -= item.speed
+                }
+                item.draw( ctx )
+                return true
+            }
+        } )
+    }
+    var render = function(){
+        ctx.clearRect(0, 0, $canvas.width, $canvas.height);
+        ctx.putImageData( canvasHistory[ canvasHistory.length - 1 ], 0, 0 )
+        drawAll()
+        animationTimer = requestAnimationFrame( render )
+    }
+    render()
+}
+send.addEventListener( 'click', function(){
+    var inputText = $input.value
+    $input.value = ""
+    var aBarrage = new Barrage( inputText, $canvas )
+    barrageArray.push( aBarrage )
+} )
+$input.addEventListener( "keydown", function( ev ){
+    if (event.keyCode == "13") {
+        var inputText = $input.value
+        $input.value = ""
+        var aBarrage = new Barrage( inputText, $canvas )
+        barrageArray.push( aBarrage )
+    }
+} )
+quitDanmu.addEventListener( "click", function(){
+    $input.value = ""
+    cancelAnimationFrame( animationTimer )
+    document.querySelector(".danmu-box").style.display = "none"
+    ctx.putImageData( canvasHistory[ canvasHistory.length - 1 ], 0, 0 )
+    lookModalToggle( false )
+    barrageData = []
+    points = []
+    $container.style.display = "flex"
+} )
+
+
+// 选择颜色
+function selectColor( current ){
+    var colorIndex = parseInt( current.dataset.color )
+    if( colorIndex === currentColor  ){
+
+    } else {
+        document.getElementsByClassName("color-item")[currentColor].classList.toggle("action")
+        document.getElementsByClassName("color-item")[colorIndex].classList.toggle("action")
+        currentColor = colorIndex
+        penAttibutes.fillStyle = colorLsit[currentColor]
+        penAttibutes.strokeStyle = colorLsit[currentColor]
+    }
+}
+// 撤销
+function funUndo(){
+    if( step > 1 ){
+        ctx.putImageData( canvasHistory[ --step - 1 ], 0, 0 )
+    } else {
+        alert( "Now is the initial canvas ~~~" )
+    }
+}
+// 前进
+function funRedo(){
+    if( step < canvasHistory.length ){
+        ctx.putImageData( canvasHistory[ step++ ], 0, 0 )
+    } else {
+        alert( "Now is the newest canvas ~~~" )
+    }
+}
+
+// 保存到历史
+function saveToHistory(){
+    if(step === canvasHistory.length){
+        let nowImage = ctx.getImageData( 0, 0, $canvas.width, $canvas.height )
+        canvasHistory.push( nowImage )
+        step++
+    } else {
+        canvasHistory.length = step;    // 截断数组
+    }
+}
+
+// 页面相关的方法
+$mask.addEventListener("click", function(){
+    cuted = false
+    $mask.style.display = "none"
+    $rotateBtn.style.display = "none"
+    document.querySelector(".r-drawer-box").style.display = "none"
+})
+
+$btn.addEventListener("click", function(){
+    cuted = false
+    let saveA = document.createElement('a')
+    document.body.appendChild(saveA)
+    saveA.href = document.getElementsByClassName("displayImg")[0].src
+    saveA.download = 'canvas-'+(new Date).getTime()
+    saveA.target = '_blank'
+    saveA.click();
+})
+
+function classToggle( nowClass ){
+    if( nowClass === currentMenu ){
+        return
+    } else {
+        var action = document.querySelector( "i." + currentMenu )
+        action.classList.toggle("action")
+        var currentEle = document.querySelector( "i." + nowClass )
+        currentEle.classList.toggle("action")
+        currentMenu = nowClass
+    }
+}
+
+function closePenMenu(){
+    if( Array.from($menuBox.classList).includes( "hide" ) ){
+
+    } else {
+        $menuBox.classList.toggle("hide")
+    }
+}
+
+$sizeRange.onchange = function(  ){
+    document.getElementsByClassName("circle-dot")[0].style.transform = 'scale('+ (parseInt($sizeRange.value)) +')';
+    penAttibutes.width = parseInt( $sizeRange.value ) * 2
+}
+
+$opRange.onchange = function(){
+    // 暂时不实现，效果不理想
+    // penAttibutes.globalAlpha = 1 - parseInt( $opRange.value ) / 10
+    document.getElementsByClassName("opacity-dot")[0].style.opacity = 1 - parseInt( $opRange.value ) / 10
+}
+
+// -------------------裁剪-------------------------------
+
+// 裁剪三步走
+// document.addEventListener('mousedown', docDown, false);
+// document.addEventListener('mousemove', docMove, false);
+// document.addEventListener('mouseup', docUp, false);
+
+if( document.body.ontouchstart !== undefined ){
+    document.ontouchstart = docDown
+    document.ontouchmove = docMove
+    document.ontouchend = docUp
+} else {
+    document.onmousedown = docDown
+    document.onmousemove = docMove
+    document.onmouseup = docUp
+}
+
+function docDown( ev ){
+    if( cuted ) return
+    if( paintingModal === "cut" ){
+        ev = ev.touches ? ev.touches[0] : ev
+        isDown = true
+        points = []
+        points.push({ x : ev.clientX, y : ev.clientY })
+        $cutBox.style.top = points[0].y + "px"
+        $cutBox.style.left = points[0].x + "px"
+    }
+}
+function docMove( ev ){
+    if( cuted ) return
+    if( paintingModal === "cut" ){
+        ev = ev.touches ? ev.touches[0] : ev
+        if( isDown  && ev.clientX !== points[0].x && ev.clientY !== points[0].y ){
+            points.push( { x : ev.clientX, y : ev.clientY } )
+            var op = document.querySelector(".op-mask")
+            if( op.style.display !== "block" ){
+                op.style.display = "block"
+            }
+            var { x, y } = getPos( ev )
+            var elw = Math.abs(x - points[0].x)
+            var elh = Math.abs(y - points[0].y)
+            document.querySelector(".text-px").innerHTML = elw + "x" + elh
+            $cutBox.style.display = "block"
+            $cutBox.style.height = elh + "px"
+            $cutBox.style.width = elw + "px"
+        }
+    }
+}
+function docUp(){
+    if( cuted ) return
+    if( !isDown ) return
+    if( paintingModal === "cut" ){
+        if( $cutBox.style.display === "block" ) {
+            cuted = true
+        }
+        isDown = false
+        // 移动端抬起事件没有点，故这里不能赋值
+        // points.push( { x : ev.clientX, y : ev.clientY } )
+        // points.push( { x : points[ points.length - 1 ].x, y : points[ points.length - 1 ].y } )
+    }
+}
+// 裁剪方法
+$cutBox.addEventListener( "click", ( e ) => {
+    switch ( e.target.dataset.cutfun ){
+        case "save":
+            cutSave()
+            break
+        case "close":
+            cutClose()
+            break
+        case "ok":
+            cutOk()
+            break
+    }
+} )
+
+function cutSave(  ){
+    // 通用
+    $rotateBtn.style.display = "block"
+    $cutBox.style.display = "none"
+    document.querySelector(".op-mask").style.display = "none"
+
+    $mask.style.display = "block"
+    document.querySelector(".r-drawer-box").style.display = "block"
+    var cutw = Math.abs( points[ points.length - 1 ].x - points[0].x )
+    var cuth = Math.abs( points[ points.length - 1 ].y - points[0].y )
+    if( points[ points.length - 1 ].x < points[0].x || points[ points.length - 1 ].y < points[0].y ){
+        [ points[ points.length - 1 ], points[0] ] = [ points[0], points[ points.length - 1 ] ]
+    }
+    ctx2 = canvas2.getContext("2d")
+
+    canvas2.width = cutw
+    canvas2.height = cuth
+
+    var oldData = ctx.getImageData( points[0].x, points[0].y, cutw, cuth )
+    ctx2.putImageData( oldData, 0, 0, )
+
+    var imgUrl = canvas2.toDataURL()
+    var imgEl = document.getElementsByClassName("displayImg")[0]
+    imgEl.src = imgUrl
+    points = []
+}
+$rotateBtn.addEventListener( "click", function(){
+    var imgEl = document.getElementsByClassName("displayImg")[0]
+    var w = canvas2.height
+    var h = canvas2.width
+    canvas2.height = h
+    canvas2.width = w
+
+    ctx2.translate( canvas2.width , 0 )
+    ctx2.rotate( 90 * Math.PI / 180 )
+    ctx2.drawImage( imgEl, 0, 0 )
+    ctx2.restore()
+    var imgUrl = canvas2.toDataURL()
+    imgEl.src = imgUrl
+    document.getElementsByClassName("img-box")[0].appendChild( imgEl )
+} )
+function cutClose(){
+    cuted = false
+    $cutBox.style.display = "none"
+    document.querySelector(".op-mask").style.display = "none"
+    points = []
+}
+//假功能
+function cutOk(){
+    alert("Copied to clipboard successfully!")
+    $cutBox.style.display = "none"
+    points = []
+}
+
+
+
+
+//   我的实现绘画
+// function draw(){
+//     if( $canvas.getContext ){
+//         ctx = $canvas.getContext("2d")
+//         console.dir( ctx )
+//         $canvas.onmousedown = function( ev ){
+//             ev = ev || event
+//             var x = ev.clientX
+//             var y = ev.clientY
+//             ctx.save()
+//             ctx.lineWidth = penAttibutes.width
+//             console.log( penAttibutes )
+//             ctx.lineCap = penAttibutes.lineCap
+//             ctx.lineJoin = penAttibutes.lineJoin
+//             ctx.strokeStyle = penAttibutes.strokeStyle
+//             ctx.fillStyle = penAttibutes.fillStyle
+//             ctx.globalCompositeOperation = penAttibutes.globalCompositeOperation
+//             ctx.beginPath()
+//             ctx.moveTo( x + 6 , y + 6 )
+//             document.onmousemove = function( moveev ){
+//                 moveev = moveev || event
+//                 ctx.lineTo( moveev.clientX  + 6, moveev.clientY + 6 )
+//                 ctx.stroke()
+//             }
+//             document.onmouseup = () => {
+//                 ctx.restore()
+//                 document.onmousemove = document.onmouseup = null
+//             }
+//             return false
+//         }
+//     } else {
+//         alert("-------对不起-你的浏览器不支持canvas")
+//     }
+// }
